@@ -1,0 +1,581 @@
+{
+  "groups": {
+    "A": [
+      "FC Kiutletiko",
+      "FC QSOVROSTVIS",
+      "ამბიდექსტერი",
+      "Trinity",
+      "GSE"
+    ],
+    "B": [
+      "SE7EN",
+      "Q",
+      "BMF",
+      "pawo",
+      "ციხე"
+    ],
+    "C": [
+      "დიდი გზა",
+      "არა",
+      "ბოლოსწინა სეზონი",
+      "საძმოს წევრები",
+      "Blonde Lovers",
+      "პომპეი"
+    ],
+    "D": [
+      "თუ მაჩ",
+      "ბილბაო",
+      "წერო",
+      "კიდეკაია",
+      "Nageci",
+      "გოლანდი"
+    ]
+  },
+  "standings": {
+    "A": {
+      "FC Kiutletiko": {
+        "played": 1,
+        "won": 1,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 2,
+        "ga": 0,
+        "gd": 2,
+        "points": 3
+      },
+      "FC QSOVROSTVIS": {
+        "played": 1,
+        "won": 1,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 2,
+        "ga": 0,
+        "gd": 2,
+        "points": 3
+      },
+      "ამბიდექსტერი": {
+        "played": 2,
+        "won": 0,
+        "drawn": 0,
+        "lost": 2,
+        "gf": 1,
+        "ga": 4,
+        "gd": -3,
+        "points": 0
+      },
+      "Trinity": {
+        "played": 1,
+        "won": 1,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 2,
+        "ga": 1,
+        "gd": 1,
+        "points": 3
+      },
+      "GSE": {
+        "played": 1,
+        "won": 0,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 0,
+        "ga": 2,
+        "gd": -2,
+        "points": 0
+      }
+    },
+    "B": {
+      "SE7EN": {
+        "played": 2,
+        "won": 2,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 7,
+        "ga": 1,
+        "gd": 6,
+        "points": 6
+      },
+      "Q": {
+        "played": 1,
+        "won": 0,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 0,
+        "ga": 4,
+        "gd": -4,
+        "points": 0
+      },
+      "BMF": {
+        "played": 1,
+        "won": 0,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 1,
+        "ga": 3,
+        "gd": -2,
+        "points": 0
+      },
+      "pawo": {
+        "played": 1,
+        "won": 1,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 2,
+        "ga": 0,
+        "gd": 2,
+        "points": 3
+      },
+      "ციხე": {
+        "played": 1,
+        "won": 0,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 0,
+        "ga": 2,
+        "gd": -2,
+        "points": 0
+      }
+    },
+    "C": {
+      "დიდი გზა": {
+        "played": 1,
+        "won": 0,
+        "drawn": 1,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 1
+      },
+      "არა": {
+        "played": 1,
+        "won": 1,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 3,
+        "ga": 0,
+        "gd": 3,
+        "points": 3
+      },
+      "ბოლოსწინა სეზონი": {
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 0
+      },
+      "საძმოს წევრები": {
+        "played": 1,
+        "won": 1,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 3,
+        "ga": 2,
+        "gd": 1,
+        "points": 3
+      },
+      "Blonde Lovers": {
+        "played": 1,
+        "won": 0,
+        "drawn": 1,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 1
+      },
+      "პომპეი": {
+        "played": 2,
+        "won": 0,
+        "drawn": 0,
+        "lost": 2,
+        "gf": 2,
+        "ga": 6,
+        "gd": -4,
+        "points": 0
+      }
+    },
+    "D": {
+      "თუ მაჩ": {
+        "played": 1,
+        "won": 1,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 5,
+        "ga": 1,
+        "gd": 4,
+        "points": 3
+      },
+      "ბილბაო": {
+        "played": 1,
+        "won": 0,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 1,
+        "ga": 5,
+        "gd": -4,
+        "points": 0
+      },
+      "წერო": {
+        "played": 1,
+        "won": 1,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 3,
+        "ga": 0,
+        "gd": 3,
+        "points": 3
+      },
+      "კიდეკაია": {
+        "played": 1,
+        "won": 0,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 0,
+        "ga": 3,
+        "gd": -3,
+        "points": 0
+      },
+      "Nageci": {
+        "played": 1,
+        "won": 0,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 0,
+        "ga": 2,
+        "gd": -2,
+        "points": 0
+      },
+      "გოლანდი": {
+        "played": 1,
+        "won": 1,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 2,
+        "ga": 0,
+        "gd": 2,
+        "points": 3
+      }
+    }
+  },
+  "matches": [
+    {
+      "group": "B",
+      "home": "SE7EN",
+      "away": "Q",
+      "homeScore": 4,
+      "awayScore": 0,
+      "id": 1762276813577
+    },
+    {
+      "group": "C",
+      "home": "საძმოს წევრები",
+      "away": "პომპეი",
+      "homeScore": 3,
+      "awayScore": 2,
+      "id": 1762276847298
+    },
+    {
+      "group": "D",
+      "home": "Nageci",
+      "away": "გოლანდი",
+      "homeScore": 0,
+      "awayScore": 2,
+      "id": 1762276869386
+    },
+    {
+      "group": "A",
+      "home": "ამბიდექსტერი",
+      "away": "FC Kiutletiko",
+      "homeScore": 0,
+      "awayScore": 2,
+      "id": 1762276882147
+    },
+    {
+      "group": "A",
+      "home": "ამბიდექსტერი",
+      "away": "Trinity",
+      "homeScore": 1,
+      "awayScore": 2,
+      "id": 1762427507079
+    },
+    {
+      "group": "A",
+      "home": "FC QSOVROSTVIS",
+      "away": "GSE",
+      "homeScore": 2,
+      "awayScore": 0,
+      "id": 1762427692336
+    },
+    {
+      "group": "B",
+      "home": "SE7EN",
+      "away": "BMF",
+      "homeScore": 3,
+      "awayScore": 1,
+      "id": 1762427757163
+    },
+    {
+      "group": "B",
+      "home": "pawo",
+      "away": "ციხე",
+      "homeScore": 2,
+      "awayScore": 0,
+      "id": 1762427852473
+    },
+    {
+      "group": "C",
+      "home": "არა",
+      "away": "პომპეი",
+      "homeScore": 3,
+      "awayScore": 0,
+      "id": 1762427985673
+    },
+    {
+      "group": "C",
+      "home": "დიდი გზა",
+      "away": "Blonde Lovers",
+      "homeScore": 0,
+      "awayScore": 0,
+      "id": 1762428167779
+    },
+    {
+      "group": "D",
+      "home": "წერო",
+      "away": "კიდეკაია",
+      "homeScore": 3,
+      "awayScore": 0,
+      "id": 1762428199820
+    },
+    {
+      "group": "D",
+      "home": "თუ მაჩ",
+      "away": "ბილბაო",
+      "homeScore": 5,
+      "awayScore": 1,
+      "id": 1762428292181
+    }
+  ],
+  "scorers": [
+    {
+      "player": "გიორგი რეხვიაშვილი",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762276813577",
+      "matchType": "group"
+    },
+    {
+      "player": "დავით ქარსელიძე",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762276813577",
+      "matchType": "group"
+    },
+    {
+      "player": "შაკო თაზიაშვილი",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762276813577",
+      "matchType": "group"
+    },
+    {
+      "player": "ჯემიკო ჯაბიძე",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762276813577",
+      "matchType": "group"
+    },
+    {
+      "player": "ილია ფხაკაძე",
+      "team": "საძმოს წევრები",
+      "goals": 1,
+      "matchId": "group_1762276847298",
+      "matchType": "group"
+    },
+    {
+      "player": "გუგა გაგლოშვილი",
+      "team": "საძმოს წევრები",
+      "goals": 2,
+      "matchId": "group_1762276847298",
+      "matchType": "group"
+    },
+    {
+      "player": "გურამ გრიგალაშვილი",
+      "team": "პომპეი",
+      "goals": 1,
+      "matchId": "group_1762276847298",
+      "matchType": "group"
+    },
+    {
+      "player": "საბა გელბახიანი",
+      "team": "პომპეი",
+      "goals": 1,
+      "matchId": "group_1762276847298",
+      "matchType": "group"
+    },
+    {
+      "player": "დაჩი გორდიაშვილი",
+      "team": "გოლანდი",
+      "goals": 1,
+      "matchId": "group_1762276869386",
+      "matchType": "group"
+    },
+    {
+      "player": "ლუკა ვასაძე",
+      "team": "გოლანდი",
+      "goals": 1,
+      "matchId": "group_1762276869386",
+      "matchType": "group"
+    },
+    {
+      "player": "ალექსანდრე ჭეიშვილი",
+      "team": "FC Kiutletiko",
+      "goals": 2,
+      "matchId": "group_1762276882147",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკა კუტია",
+      "team": "ამბიდექსტერი",
+      "goals": 1,
+      "matchId": "group_1762427507079",
+      "matchType": "group"
+    },
+    {
+      "player": "თემურ ჟღენტი",
+      "team": "Trinity",
+      "goals": 1,
+      "matchId": "group_1762427507079",
+      "matchType": "group"
+    },
+    {
+      "player": "ტიტე ზვიადაძე",
+      "team": "Trinity",
+      "goals": 1,
+      "matchId": "group_1762427507079",
+      "matchType": "group"
+    },
+    {
+      "player": "ლუკა ბოჭორიშვილი",
+      "team": "FC QSOVROSTVIS",
+      "goals": 1,
+      "matchId": "group_1762427692336",
+      "matchType": "group"
+    },
+    {
+      "player": "გიორგი ფურცელაძე",
+      "team": "FC QSOVROSTVIS",
+      "goals": 1,
+      "matchId": "group_1762427692336",
+      "matchType": "group"
+    },
+    {
+      "player": "დავით ქარსელიძე",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762427757163",
+      "matchType": "group"
+    },
+    {
+      "player": "შაკო თაზიაშვილი",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762427757163",
+      "matchType": "group"
+    },
+    {
+      "player": "ჯემიკო ჯაბიძე",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762427757163",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკა გურგუჩიანი",
+      "team": "BMF",
+      "goals": 1,
+      "matchId": "group_1762427757163",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკოლოზ დონაძე",
+      "team": "pawo",
+      "goals": 2,
+      "matchId": "group_1762427852473",
+      "matchType": "group"
+    },
+    {
+      "player": "დავით მათიაშვილი",
+      "team": "არა",
+      "goals": 2,
+      "matchId": "group_1762427985673",
+      "matchType": "group"
+    },
+    {
+      "player": "ანდრია გვარამია",
+      "team": "არა",
+      "goals": 1,
+      "matchId": "group_1762427985673",
+      "matchType": "group"
+    },
+    {
+      "player": "აკაკი ღაჭავა",
+      "team": "წერო",
+      "goals": 2,
+      "matchId": "group_1762428199820",
+      "matchType": "group"
+    },
+    {
+      "player": "გიორგი უკლება",
+      "team": "წერო",
+      "goals": 1,
+      "matchId": "group_1762428199820",
+      "matchType": "group"
+    },
+    {
+      "player": "ლუკა ნარსია",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "group_1762428292181",
+      "matchType": "group"
+    },
+    {
+      "player": "მიხეილ დადიანი",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "group_1762428292181",
+      "matchType": "group"
+    },
+    {
+      "player": "იონა ჩანქსელიანი",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "group_1762428292181",
+      "matchType": "group"
+    },
+    {
+      "player": "დავით ტაბატაძე",
+      "team": "თუ მაჩ",
+      "goals": 2,
+      "matchId": "group_1762428292181",
+      "matchType": "group"
+    },
+    {
+      "player": "ვიტო გუგუშვილი",
+      "team": "ბილბაო",
+      "goals": 1,
+      "matchId": "group_1762428292181",
+      "matchType": "group"
+    }
+  ],
+  "playoffMatches": {
+    "round16": [],
+    "quarter": [],
+    "semi": [],
+    "final": []
+  },
+  "exportDate": "2025-11-06T11:50:32.763Z"
+}
