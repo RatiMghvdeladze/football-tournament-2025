@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ფეხბურთის ჩემპიონატი</title>
     <style>
-        /* Your existing CSS styles remain the same */
         * {
             margin: 0;
             padding: 0;
@@ -44,6 +43,7 @@
             padding: 10px;
             border-radius: 10px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .tab {
@@ -72,40 +72,6 @@
 
         .content.active {
             display: block;
-        }
-
-        .teams-pool {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .teams-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .team-card {
-            padding: 12px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 8px;
-            cursor: move;
-            text-align: center;
-            font-weight: bold;
-            transition: transform 0.2s;
-        }
-
-        .team-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-
-        .team-card.dragging {
-            opacity: 0.5;
         }
 
         .groups-container {
@@ -144,37 +110,14 @@
             color: #667eea;
         }
 
-        .group-teams {
-            min-height: 200px;
-            border: 2px dashed #ddd;
-            border-radius: 8px;
-            padding: 10px;
-        }
-
-        .group-teams.drag-over {
-            background: #f0f0f0;
-            border-color: #667eea;
-        }
-
         .group-team {
             padding: 10px;
             margin: 8px 0;
             background: #f8f9fa;
             border-radius: 6px;
-            cursor: move;
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .remove-btn {
-            background: #dc3545;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            padding: 4px 8px;
-            cursor: pointer;
-            font-size: 12px;
         }
 
         .standings-table {
@@ -210,56 +153,6 @@
         .position {
             font-weight: bold;
             color: #667eea;
-        }
-
-        .match-input {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .match-form {
-            display: grid;
-            gap: 15px;
-        }
-
-        .form-group {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .form-group select, .form-group input {
-            padding: 10px;
-            border: 2px solid #ddd;
-            border-radius: 6px;
-            font-size: 16px;
-        }
-
-        .form-group input[type="number"] {
-            width: 80px;
-        }
-
-        .submit-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-
-        .submit-btn:disabled {
-            background: #ccc;
-            cursor: not-allowed;
         }
 
         .playoff-bracket {
@@ -305,127 +198,6 @@
             border-color: #28a745 !important;
         }
 
-        /* Top Scorers Styles */
-        .scorers-input {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .scorer-form {
-            display: grid;
-            gap: 15px;
-        }
-
-        .scorer-item {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-        }
-
-        .scorer-item select, .scorer-item input {
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        .scorer-item input[type="number"] {
-            width: 60px;
-        }
-
-        .scorer-player {
-            flex: 1;
-        }
-
-        .scorer-goals {
-            width: 70px;
-        }
-
-        .add-scorer-btn {
-            background: #28a745;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .remove-scorer-btn {
-            background: #dc3545;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            padding: 4px 8px;
-            cursor: pointer;
-            font-size: 12px;
-        }
-
-        .scorers-list {
-            margin-top: 20px;
-        }
-
-        .scorer-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .scorer-name {
-            font-weight: bold;
-        }
-
-        .scorer-team {
-            color: #667eea;
-        }
-
-        .scorer-goals-count {
-            font-weight: bold;
-            color: #28a745;
-        }
-
-        /* Playoff Management Styles */
-        .playoff-match-input {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .playoff-match-form {
-            display: grid;
-            gap: 15px;
-        }
-
-        .playoff-round-selector {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        .round-btn {
-            padding: 8px 16px;
-            background: #f8f9fa;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        .round-btn.active {
-            background: #667eea;
-            color: white;
-            border-color: #667eea;
-        }
-
-        .playoff-match-select {
-            margin-bottom: 15px;
-        }
-
         .stage-complete {
             background: #d4edda;
             padding: 15px;
@@ -436,65 +208,11 @@
             color: #155724;
         }
 
-        .warning-message {
-            background: #fff3cd;
-            padding: 10px;
-            border-radius: 6px;
-            margin-top: 10px;
-            color: #856404;
-            border: 1px solid #ffeaa7;
-        }
-
-        /* Data Management Styles */
-        .data-management {
+        .scorers-list {
             background: white;
             padding: 20px;
             border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .data-section {
-            margin-bottom: 20px;
-        }
-
-        .json-textarea {
-            width: 100%;
-            height: 200px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-family: monospace;
-            resize: vertical;
-        }
-
-        .data-buttons {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        /* Penalty Styles */
-        .penalty-group {
-            display: none;
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
-
-        .penalty-group.active {
-            display: block;
-        }
-
-        .penalty-inputs {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .penalty-label {
-            font-weight: bold;
-            color: #667eea;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -506,97 +224,29 @@
 
         <div class="tabs">
             <button class="tab active" onclick="showTab('draw')">კენჭისყრა</button>
-            <button class="tab" onclick="showTab('matches')">თამაშები</button>
-            <button class="tab" onclick="showTab('scorers')">ბომბარდირები</button>
             <button class="tab" onclick="showTab('standings')">ტურნირის ცხრილი</button>
             <button class="tab" onclick="showTab('playoff')">პლეი-ოფი</button>
-            <button class="tab" onclick="showTab('playoffManagement')">პლეი-ოფის მართვა</button>
-            <button class="tab" onclick="showTab('dataManagement')">მონაცემების მართვა</button>
+            <button class="tab" onclick="showTab('scorers')">ბომბარდირები</button>
         </div>
 
-        <!-- Your existing HTML structure remains the same -->
         <div id="draw" class="content active">
-            <div class="teams-pool">
-                <h2>გუნდები</h2>
-                <div class="teams-grid" id="teamsPool"></div>
-            </div>
-
             <div class="groups-container">
                 <div class="group">
                     <div class="group-header">ჯგუფი A (5 გუნდი)</div>
-                    <div class="group-teams" data-group="A" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <div id="groupA"></div>
-                    </div>
+                    <div id="groupA"></div>
                 </div>
                 <div class="group">
                     <div class="group-header">ჯგუფი B (5 გუნდი)</div>
-                    <div class="group-teams" data-group="B" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <div id="groupB"></div>
-                    </div>
+                    <div id="groupB"></div>
                 </div>
                 <div class="group">
                     <div class="group-header">ჯგუფი C (6 გუნდი)</div>
-                    <div class="group-teams" data-group="C" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <div id="groupC"></div>
-                    </div>
+                    <div id="groupC"></div>
                 </div>
                 <div class="group">
                     <div class="group-header">ჯგუფი D (6 გუნდი)</div>
-                    <div class="group-teams" data-group="D" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <div id="groupD"></div>
-                    </div>
+                    <div id="groupD"></div>
                 </div>
-            </div>
-        </div>
-
-        <div id="matches" class="content">
-            <div class="match-input">
-                <h2>თამაშის შედეგის შეყვანა</h2>
-                <div class="match-form">
-                    <div class="form-group">
-                        <label>ჯგუფი:</label>
-                        <select id="matchGroup">
-                            <option value="A">ჯგუფი A</option>
-                            <option value="B">ჯგუფი B</option>
-                            <option value="C">ჯგუფი C</option>
-                            <option value="D">ჯგუფი D</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>მასპინძელი:</label>
-                        <select id="homeTeam"></select>
-                        <input type="number" id="homeScore" min="0" placeholder="0">
-                    </div>
-                    <div class="form-group">
-                        <label>სტუმარი:</label>
-                        <select id="awayTeam"></select>
-                        <input type="number" id="awayScore" min="0" placeholder="0">
-                    </div>
-                    <div id="matchWarning"></div>
-                    <button class="submit-btn" id="submitMatchBtn" onclick="submitMatch()">შედეგის დამატება</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="scorers" class="content">
-            <div class="scorers-input">
-                <h2>გოლების შეყვანა</h2>
-                <div class="scorer-form">
-                    <div class="form-group">
-                        <label>თამაში:</label>
-                        <select id="scorerMatch">
-                            <option value="">აირჩიეთ თამაში</option>
-                        </select>
-                    </div>
-                    <div id="scorersList"></div>
-                    <button class="add-scorer-btn" onclick="addScorer()">+ მოთამაშის დამატება</button>
-                    <button class="submit-btn" onclick="submitScorers()" style="margin-top: 15px;">გოლების დამატება</button>
-                </div>
-            </div>
-            
-            <div class="scorers-list">
-                <h2>ბომბარდირების ცხრილი</h2>
-                <div id="topScorersTable"></div>
             </div>
         </div>
 
@@ -617,367 +267,814 @@
             </div>
         </div>
 
-        <div id="playoffManagement" class="content">
-            <div class="playoff-match-input">
-                <h2>პლეი-ოფის თამაშის შედეგის შეყვანა</h2>
-                <div class="playoff-match-form">
-                    <div class="playoff-round-selector">
-                        <button class="round-btn active" onclick="selectPlayoffRound('round16')">მერვედფინალი</button>
-                        <button class="round-btn" onclick="selectPlayoffRound('quarter')">მეოთხედფინალი</button>
-                        <button class="round-btn" onclick="selectPlayoffRound('semi')">ნახევარფინალი</button>
-                        <button class="round-btn" onclick="selectPlayoffRound('final')">ფინალი</button>
-                    </div>
-                    <div class="playoff-match-select">
-                        <select id="playoffMatchSelect">
-                            <option value="">აირჩიეთ თამაში</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>გუნდი 1:</label>
-                        <input type="text" id="playoffTeam1" readonly>
-                        <input type="number" id="playoffScore1" min="0" placeholder="0">
-                    </div>
-                    <div class="form-group">
-                        <label>გუნდი 2:</label>
-                        <input type="text" id="playoffTeam2" readonly>
-                        <input type="number" id="playoffScore2" min="0" placeholder="0">
-                    </div>
-                    
-                    <!-- Penalty inputs (initially hidden) -->
-                    <div class="penalty-group" id="penaltyGroup">
-                        <div class="penalty-label">პენალტები (შეავსეთ მხოლოდ თუ თამაში დამთავრდა ფრედ):</div>
-                        <div class="penalty-inputs">
-                            <label>გუნდი 1:</label>
-                            <input type="number" id="penaltyScore1" min="0" placeholder="0">
-                            <label>გუნდი 2:</label>
-                            <input type="number" id="penaltyScore2" min="0" placeholder="0">
-                        </div>
-                    </div>
-                    
-                    <button class="submit-btn" onclick="submitPlayoffMatch()">შედეგის დამატება</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="dataManagement" class="content">
-            <div class="data-management">
-                <h2>მონაცემების მართვა</h2>
-                
-                <div class="data-section">
-                    <h3>მონაცემების ექსპორტი</h3>
-                    <p>დააკოპირეთ ქვემოთ მოცემული JSON მონაცემები თქვენი ტურნირის შესანახად ან სხვებთან გასაზიარებლად:</p>
-                    <textarea class="json-textarea" id="exportData" readonly></textarea>
-                    <div class="data-buttons">
-                        <button class="submit-btn" onclick="copyExportData()">JSON-ის კოპირება</button>
-                        <button class="submit-btn" onclick="updateExportData()">JSON-ის განახლება</button>
-                    </div>
-                </div>
-                
-                <div class="data-section">
-                    <h3>მონაცემების იმპორტი</h3>
-                    <p>ჩასვით JSON მონაცემები ქვემოთ მოცემულ ველში და დააჭირეთ იმპორტის ღილაკს ტურნირის გასასვლელად:</p>
-                    <textarea class="json-textarea" id="importData" placeholder="ჩასვით JSON მონაცემები აქ..."></textarea>
-                    <div class="data-buttons">
-                        <button class="submit-btn" onclick="importData()">JSON-ის იმპორტი</button>
-                        <button class="submit-btn" style="background: #dc3545;" onclick="clearImportData()">გასუფთავება</button>
-                    </div>
-                </div>
-                
-                <div class="data-section">
-                    <h3>ადგილობრივი მონაცემების მართვა</h3>
-                    <p>მართეთ მონაცემები თქვენს ბრაუზერში:</p>
-                    <div class="data-buttons">
-                        <button class="submit-btn" onclick="saveData()">მონაცემების შენახვა</button>
-                        <button class="submit-btn" onclick="loadData()">მონაცემების ჩატვირთვა</button>
-                        <button class="submit-btn" style="background: #dc3545;" onclick="resetData()">ყველა მონაცემის წაშლა</button>
-                    </div>
-                </div>
+        <div id="scorers" class="content">
+            <div class="scorers-list">
+                <h2>ბომბარდირების ცხრილი</h2>
+                <div id="topScorersTable"></div>
             </div>
         </div>
     </div>
 
     <script>
-        // გუნდები და მათი მოთამაშეები
-        const teamsData = {
-            "დიდი გზა": ["დათო ვაჩეიშვილი", "ლუკა ხაჭაპურიძე", "სანდრო ფილფანი" , "საბა ჭიჭინაძე", "რომა ონიანი", "ლუკა კაროიანი", "ნიკოლოზ უბილავა", "ლუკა კურდღელიძე"],
-            "SE7EN": ["გიორგი რეხვიაშვილი", "დავით ქარსელიძე", "გარი ქათამაძე", "ვაკო ქარდავა", "შაკო თაზიაშვილი", "ნიკოლოზ ნადარეიშვილი", "ალექსანდრე ტორონჯაძე", "ჯემიკო ჯაბიძე"],
-            "ციხე": ["ნიკა ვარდოსანიძე", "გიორგი გუგუციძე", "გივი ზოიძე", "ვასო კახნიაშვილი", "მიშო ხანთაძე", "ჯუბა ონიანი", "ლუკა გურეშიძე"],
-            "pawo": ["თედო რიონიძე", "ანდრია კეკენაძე", "ნიკოლოზ დონაძე", "საბა ჩიჩუა", "რამაზი ყიფიანი", "საბა კობახიძე", "საბა ნოზაძე", "შალვა ავალიანი"],
-            "BMF": ["რევაზ დვალი", "თომა ქიშმარეიშვილი", "დემნა ყვავაძე", "ნოდარ ნაკაშიძე", "ნიკა გურგუჩიანი", "ნიკა გურული", "მათე ქოჩიაშვილი"],
-            "FC QSOVROSTVIS": ["ლევანი კოვზირიძე", "თემური მაჭავარიანი", "მამუკა ლომჯარია", "მიხეილ დუმბაძე", "დავით კაროიანი", "სერგი არაბიძე", "ლუკა ბოჭორიშვილი", "გიორგი ფურცელაძე"],
-            "თუ მაჩ": ["მერაბი ბოჭოიძე","დავით ტაბატაძე", "ლუკა ნარსია", "მიხეილ დადიანი", "მიშო უჯერაშვილი", "იონა ჩანქსელიანი", "გიორგი გაგუა", "საბა საკანდელიძე"],
-            "ამბიდექსტერი": ["ნიკა კუტია", "გური ბოჭორიშვილი", "ზურა ხვედელიძე", "გენკა სალდაძე", "ვახო სვანაძე", "ალექსანდრე ჯელია", "ნიკა ჯავაშვილი", "საბა ფოჩხუა"],
-            "Q": ["სანდრო იობიძე", "სანდრო პაიკიძე", "ლუკა კიკვაძე", "საბა სარალიძე", "გაბი კირთაძე", "გიორგი ბენიძე"],
-            "არა": ["ივანე ურჯუმელაშვილი", "დავით მათიაშვილი", "ანდრია გვარამია", "თეიმურაზ ფუტკარაძე", "თემური დაღუნდარიძე", "ნიკოლოზ კვინიკაძე", "ლუკა დუმბაძე", "რატი მღვდელაძე"],
-            "Blonde Lovers": ["ცოტნე ბზიკაძე", "დავით ლოსაბერიძე", "ლუკა ლეჟავა", "ბექა მორჩაძე", "გიორგი ფონაძე", "ლუკა გვეტაძე"],
-            "ბოლოსწინა სეზონი": ["ბაქარი კვატაია", "ტატო პირველაშვილი", "ოთო კაცაძე", "ბექა ბარათაშვილი", "გიორგი ჩაფიჩაძე", "ლუკა ტურაშვილი", "თორნიკე გოგოლიშვილი", "ლუკა ფუტკარაძე"],
-            "Nageci": ["ნიკოლოზ გაბრიაძე","აკო ნებიერიძე", "თემური ჩუბინიძე", "დათო თავითაია", "ოთო თოფაძე", "გიორგი კორძაძე", "საბა ჩუბინიძე"],
-            "გოლანდი": ["ბაქარ ბანძელაძე", "გიორგი გვინიანიძე", "დაჩი გორდიაშვილი", "ლუკა ვასაძე", "დემეტრე ხაჭაპურიძე", "ლაშა ჯაფარიძე", "მიშო მღვდლიაშვილი"],
-            "ბილბაო": ["დაჩი ჩადუნელი", "ლუკა სანაია", "დემეტრე კანაჩაძე", "ვიტო გუგუშვილი", "ნიკა რუსიშვილი", "ლევან აბაშიძე", "დავით სადაღაშვილი"],
-            "საძმოს წევრები": ["ილია ფხაკაძე", "დათო მჟავანაძე", "გუგა გაგლოშვილი", "თოკო შაიშმელაშვილი", "თემურ წიკლაური", "დათო ბერიძე", "გიორგი ლეშკაშელი", "იოსები ლევიძე"],
-            "კიდეკაია": ["ლაშა ვერულაშვილი", "ნიკა დონაძე", "ავთო გოგოლაძე", "გიორგი სვანიძე", "ნიკოლოზ ჯაფარიძე", "ზუკა ხორბალაძე", "გივი მიქელაძე"],
-            "წერო": ["თორნიკე წერეთელი", "ნიკოლოზ ჩირაძე", "აკაკი ღაჭავა", "ნიკოლოზ მაცაბერიძე", "გიორგი ჩიკვაიძე", "გიორგი უკლება", "გიორგი უგულავა", "გიორგი ჩიხლაძე"],
-            "GSE": ["ალექსანდრე გოგია", "თეიმურაზი ფხაკაძე", "გიორგი გიგოლაშვილი", "ლუკა ყაჭაშვილი", "დავით კირთაძე", "საბა უგულავა"],
-            "პომპეი": ["დათო ჩავლეშვილი", "ზაზა კარსანიძე", "საბა ფოჩხუა", "გურამ გრიგალაშვილი", "საბა გელბახიანი", "გიორგი ფურცხვანიძე"],
-            "FC Kiutletiko": ["დავით ბოჭორიშვილი", "ლუკა ყუფარაძე", "ალექსანდრე ჭეიშვილი", "ლუკა ჩიტორელიძე", "საბა უგულავა", "ზვიად კორძაძე", "ლევან კვეტენაძე"],
-            "Trinity": ["გიორგი კოღუაშვილი", "საბა ადეიშვილი", "თემურ ჟღენტი", "ტიტე ზვიადაძე", "გიორგი ურიათმყოფელი", "დემური მაჭავარიანი"]
-        };
+        // მონაცემები JSON-დან
+        const tournamentData = {
+  "groups": {
+    "A": [
+      "FC Kiutletiko",
+      "FC QSOVROSTVIS",
+      "ამბიდექსტერი",
+      "Trinity",
+      "GSE"
+    ],
+    "B": [
+      "SE7EN",
+      "Q",
+      "BMF",
+      "pawo",
+      "ციხე"
+    ],
+    "C": [
+      "დიდი გზა",
+      "არა",
+      "ბოლოსწინა სეზონი",
+      "საძმოს წევრები",
+      "Blonde Lovers",
+      "პომპეი"
+    ],
+    "D": [
+      "თუ მაჩ",
+      "ბილბაო",
+      "წერო",
+      "კიდეკაია",
+      "Nageci",
+      "გოლანდი"
+    ]
+  },
+  "standings": {
+    "A": {
+      "FC Kiutletiko": {
+        "played": 2,
+        "won": 1,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 2,
+        "ga": 3,
+        "gd": -1,
+        "points": 3
+      },
+      "FC QSOVROSTVIS": {
+        "played": 2,
+        "won": 1,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 2,
+        "ga": 1,
+        "gd": 1,
+        "points": 3
+      },
+      "ამბიდექსტერი": {
+        "played": 3,
+        "won": 1,
+        "drawn": 0,
+        "lost": 2,
+        "gf": 2,
+        "ga": 4,
+        "gd": -2,
+        "points": 3
+      },
+      "Trinity": {
+        "played": 2,
+        "won": 2,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 5,
+        "ga": 1,
+        "gd": 4,
+        "points": 6
+      },
+      "GSE": {
+        "played": 1,
+        "won": 0,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 0,
+        "ga": 2,
+        "gd": -2,
+        "points": 0
+      }
+    },
+    "B": {
+      "SE7EN": {
+        "played": 2,
+        "won": 2,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 7,
+        "ga": 1,
+        "gd": 6,
+        "points": 6
+      },
+      "Q": {
+        "played": 2,
+        "won": 0,
+        "drawn": 0,
+        "lost": 2,
+        "gf": 0,
+        "ga": 6,
+        "gd": -6,
+        "points": 0
+      },
+      "BMF": {
+        "played": 3,
+        "won": 0,
+        "drawn": 0,
+        "lost": 3,
+        "gf": 1,
+        "ga": 9,
+        "gd": -8,
+        "points": 0
+      },
+      "pawo": {
+        "played": 3,
+        "won": 3,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 7,
+        "ga": 0,
+        "gd": 7,
+        "points": 9
+      },
+      "ციხე": {
+        "played": 2,
+        "won": 1,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 3,
+        "ga": 2,
+        "gd": 1,
+        "points": 3
+      }
+    },
+    "C": {
+      "დიდი გზა": {
+        "played": 1,
+        "won": 0,
+        "drawn": 1,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 1
+      },
+      "არა": {
+        "played": 2,
+        "won": 2,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 7,
+        "ga": 0,
+        "gd": 7,
+        "points": 6
+      },
+      "ბოლოსწინა სეზონი": {
+        "played": 1,
+        "won": 1,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 3,
+        "ga": 0,
+        "gd": 3,
+        "points": 3
+      },
+      "საძმოს წევრები": {
+        "played": 2,
+        "won": 1,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 3,
+        "ga": 6,
+        "gd": -3,
+        "points": 3
+      },
+      "Blonde Lovers": {
+        "played": 1,
+        "won": 0,
+        "drawn": 1,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 1
+      },
+      "პომპეი": {
+        "played": 3,
+        "won": 0,
+        "drawn": 0,
+        "lost": 3,
+        "gf": 2,
+        "ga": 9,
+        "gd": -7,
+        "points": 0
+      }
+    },
+    "D": {
+      "თუ მაჩ": {
+        "played": 2,
+        "won": 1,
+        "drawn": 1,
+        "lost": 0,
+        "gf": 8,
+        "ga": 4,
+        "gd": 4,
+        "points": 4
+      },
+      "ბილბაო": {
+        "played": 2,
+        "won": 0,
+        "drawn": 0,
+        "lost": 2,
+        "gf": 2,
+        "ga": 7,
+        "gd": -5,
+        "points": 0
+      },
+      "წერო": {
+        "played": 2,
+        "won": 1,
+        "drawn": 1,
+        "lost": 0,
+        "gf": 6,
+        "ga": 3,
+        "gd": 3,
+        "points": 4
+      },
+      "კიდეკაია": {
+        "played": 2,
+        "won": 1,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 2,
+        "ga": 4,
+        "gd": -2,
+        "points": 3
+      },
+      "Nageci": {
+        "played": 1,
+        "won": 0,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 0,
+        "ga": 2,
+        "gd": -2,
+        "points": 0
+      },
+      "გოლანდი": {
+        "played": 1,
+        "won": 1,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 2,
+        "ga": 0,
+        "gd": 2,
+        "points": 3
+      }
+    }
+  },
+  "matches": [
+    {
+      "group": "B",
+      "home": "SE7EN",
+      "away": "Q",
+      "homeScore": 4,
+      "awayScore": 0,
+      "id": 1762276813577
+    },
+    {
+      "group": "C",
+      "home": "საძმოს წევრები",
+      "away": "პომპეი",
+      "homeScore": 3,
+      "awayScore": 2,
+      "id": 1762276847298
+    },
+    {
+      "group": "D",
+      "home": "Nageci",
+      "away": "გოლანდი",
+      "homeScore": 0,
+      "awayScore": 2,
+      "id": 1762276869386
+    },
+    {
+      "group": "A",
+      "home": "ამბიდექსტერი",
+      "away": "FC Kiutletiko",
+      "homeScore": 0,
+      "awayScore": 2,
+      "id": 1762276882147
+    },
+    {
+      "group": "A",
+      "home": "ამბიდექსტერი",
+      "away": "Trinity",
+      "homeScore": 1,
+      "awayScore": 2,
+      "id": 1762427507079
+    },
+    {
+      "group": "A",
+      "home": "FC QSOVROSTVIS",
+      "away": "GSE",
+      "homeScore": 2,
+      "awayScore": 0,
+      "id": 1762427692336
+    },
+    {
+      "group": "B",
+      "home": "SE7EN",
+      "away": "BMF",
+      "homeScore": 3,
+      "awayScore": 1,
+      "id": 1762427757163
+    },
+    {
+      "group": "B",
+      "home": "pawo",
+      "away": "ციხე",
+      "homeScore": 2,
+      "awayScore": 0,
+      "id": 1762427852473
+    },
+    {
+      "group": "C",
+      "home": "არა",
+      "away": "პომპეი",
+      "homeScore": 3,
+      "awayScore": 0,
+      "id": 1762427985673
+    },
+    {
+      "group": "C",
+      "home": "დიდი გზა",
+      "away": "Blonde Lovers",
+      "homeScore": 0,
+      "awayScore": 0,
+      "id": 1762428167779
+    },
+    {
+      "group": "D",
+      "home": "წერო",
+      "away": "კიდეკაია",
+      "homeScore": 3,
+      "awayScore": 0,
+      "id": 1762428199820
+    },
+    {
+      "group": "D",
+      "home": "თუ მაჩ",
+      "away": "ბილბაო",
+      "homeScore": 5,
+      "awayScore": 1,
+      "id": 1762428292181
+    },
+    {
+      "group": "B",
+      "home": "pawo",
+      "away": "Q",
+      "homeScore": 2,
+      "awayScore": 0,
+      "id": 1762508224597
+    },
+    {
+      "group": "C",
+      "home": "ბოლოსწინა სეზონი",
+      "away": "პომპეი",
+      "homeScore": 3,
+      "awayScore": 0,
+      "id": 1762508286539
+    },
+    {
+      "group": "A",
+      "home": "FC QSOVROSTVIS",
+      "away": "ამბიდექსტერი",
+      "homeScore": 0,
+      "awayScore": 1,
+      "id": 1762509031276
+    },
+    {
+      "group": "A",
+      "home": "FC Kiutletiko",
+      "away": "Trinity",
+      "homeScore": 0,
+      "awayScore": 3,
+      "id": 1762509124139
+    },
+    {
+      "group": "C",
+      "home": "არა",
+      "away": "საძმოს წევრები",
+      "homeScore": 4,
+      "awayScore": 0,
+      "id": 1762509283482
+    },
+    {
+      "group": "B",
+      "home": "ციხე",
+      "away": "BMF",
+      "homeScore": 3,
+      "awayScore": 0,
+      "id": 1762509366006
+    },
+    {
+      "group": "D",
+      "home": "ბილბაო",
+      "away": "კიდეკაია",
+      "homeScore": 1,
+      "awayScore": 2,
+      "id": 1762509451595
+    },
+    {
+      "group": "D",
+      "home": "თუ მაჩ",
+      "away": "წერო",
+      "homeScore": 3,
+      "awayScore": 3,
+      "id": 1762509548241
+    },
+    {
+      "group": "B",
+      "home": "pawo",
+      "away": "BMF",
+      "homeScore": 3,
+      "awayScore": 0,
+      "id": 1762510451226
+    }
+  ],
+  "scorers": [
+    {
+      "player": "გიორგი რეხვიაშვილი",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762276813577",
+      "matchType": "group"
+    },
+    {
+      "player": "დავით ქარსელიძე",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762276813577",
+      "matchType": "group"
+    },
+    {
+      "player": "შაკო თაზიაშვილი",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762276813577",
+      "matchType": "group"
+    },
+    {
+      "player": "ჯემიკო ჯაბიძე",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762276813577",
+      "matchType": "group"
+    },
+    {
+      "player": "ილია ფხაკაძე",
+      "team": "საძმოს წევრები",
+      "goals": 1,
+      "matchId": "group_1762276847298",
+      "matchType": "group"
+    },
+    {
+      "player": "გუგა გაგლოშვილი",
+      "team": "საძმოს წევრები",
+      "goals": 2,
+      "matchId": "group_1762276847298",
+      "matchType": "group"
+    },
+    {
+      "player": "გურამ გრიგალაშვილი",
+      "team": "პომპეი",
+      "goals": 1,
+      "matchId": "group_1762276847298",
+      "matchType": "group"
+    },
+    {
+      "player": "საბა გელბახიანი",
+      "team": "პომპეი",
+      "goals": 1,
+      "matchId": "group_1762276847298",
+      "matchType": "group"
+    },
+    {
+      "player": "დაჩი გორდიაშვილი",
+      "team": "გოლანდი",
+      "goals": 1,
+      "matchId": "group_1762276869386",
+      "matchType": "group"
+    },
+    {
+      "player": "ლუკა ვასაძე",
+      "team": "გოლანდი",
+      "goals": 1,
+      "matchId": "group_1762276869386",
+      "matchType": "group"
+    },
+    {
+      "player": "ალექსანდრე ჭეიშვილი",
+      "team": "FC Kiutletiko",
+      "goals": 2,
+      "matchId": "group_1762276882147",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკა კუტია",
+      "team": "ამბიდექსტერი",
+      "goals": 1,
+      "matchId": "group_1762427507079",
+      "matchType": "group"
+    },
+    {
+      "player": "თემურ ჟღენტი",
+      "team": "Trinity",
+      "goals": 1,
+      "matchId": "group_1762427507079",
+      "matchType": "group"
+    },
+    {
+      "player": "ტიტე ზვიადაძე",
+      "team": "Trinity",
+      "goals": 1,
+      "matchId": "group_1762427507079",
+      "matchType": "group"
+    },
+    {
+      "player": "ლუკა ბოჭორიშვილი",
+      "team": "FC QSOVROSTVIS",
+      "goals": 1,
+      "matchId": "group_1762427692336",
+      "matchType": "group"
+    },
+    {
+      "player": "გიორგი ფურცელაძე",
+      "team": "FC QSOVROSTVIS",
+      "goals": 1,
+      "matchId": "group_1762427692336",
+      "matchType": "group"
+    },
+    {
+      "player": "დავით ქარსელიძე",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762427757163",
+      "matchType": "group"
+    },
+    {
+      "player": "შაკო თაზიაშვილი",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762427757163",
+      "matchType": "group"
+    },
+    {
+      "player": "ჯემიკო ჯაბიძე",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762427757163",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკა გურგუჩიანი",
+      "team": "BMF",
+      "goals": 1,
+      "matchId": "group_1762427757163",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკოლოზ დონაძე",
+      "team": "pawo",
+      "goals": 2,
+      "matchId": "group_1762427852473",
+      "matchType": "group"
+    },
+    {
+      "player": "დავით მათიაშვილი",
+      "team": "არა",
+      "goals": 2,
+      "matchId": "group_1762427985673",
+      "matchType": "group"
+    },
+    {
+      "player": "ანდრია გვარამია",
+      "team": "არა",
+      "goals": 1,
+      "matchId": "group_1762427985673",
+      "matchType": "group"
+    },
+    {
+      "player": "აკაკი ღაჭავა",
+      "team": "წერო",
+      "goals": 2,
+      "matchId": "group_1762428199820",
+      "matchType": "group"
+    },
+    {
+      "player": "გიორგი უკლება",
+      "team": "წერო",
+      "goals": 1,
+      "matchId": "group_1762428199820",
+      "matchType": "group"
+    },
+    {
+      "player": "ლუკა ნარსია",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "group_1762428292181",
+      "matchType": "group"
+    },
+    {
+      "player": "მიხეილ დადიანი",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "group_1762428292181",
+      "matchType": "group"
+    },
+    {
+      "player": "იონა ჩანქსელიანი",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "group_1762428292181",
+      "matchType": "group"
+    },
+    {
+      "player": "დავით ტაბატაძე",
+      "team": "თუ მაჩ",
+      "goals": 2,
+      "matchId": "group_1762428292181",
+      "matchType": "group"
+    },
+    {
+      "player": "ვიტო გუგუშვილი",
+      "team": "ბილბაო",
+      "goals": 1,
+      "matchId": "group_1762428292181",
+      "matchType": "group"
+    },
+    {
+      "player": "თედო რიონიძე",
+      "team": "pawo",
+      "goals": 2,
+      "matchId": "group_1762508224597",
+      "matchType": "group"
+    },
+    {
+      "player": "ბაქარი კვატაია",
+      "team": "ბოლოსწინა სეზონი",
+      "goals": 1,
+      "matchId": "group_1762508286539",
+      "matchType": "group"
+    },
+    {
+      "player": "ლუკა ტურაშვილი",
+      "team": "ბოლოსწინა სეზონი",
+      "goals": 1,
+      "matchId": "group_1762508286539",
+      "matchType": "group"
+    },
+    {
+      "player": "თორნიკე გოგოლიშვილი",
+      "team": "ბოლოსწინა სეზონი",
+      "goals": 1,
+      "matchId": "group_1762508286539",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკა კუტია",
+      "team": "ამბიდექსტერი",
+      "goals": 1,
+      "matchId": "group_1762509031276",
+      "matchType": "group"
+    },
+    {
+      "player": "ტიტე ზვიადაძე",
+      "team": "Trinity",
+      "goals": 3,
+      "matchId": "group_1762509124139",
+      "matchType": "group"
+    },
+    {
+      "player": "დავით მათიაშვილი",
+      "team": "არა",
+      "goals": 3,
+      "matchId": "group_1762509283482",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკოლოზ კვინიკაძე",
+      "team": "არა",
+      "goals": 1,
+      "matchId": "group_1762509283482",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკა ვარდოსანიძე",
+      "team": "ციხე",
+      "goals": 2,
+      "matchId": "group_1762509366006",
+      "matchType": "group"
+    },
+    {
+      "player": "ვასო კახნიაშვილი",
+      "team": "ციხე",
+      "goals": 1,
+      "matchId": "group_1762509366006",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკა რუსიშვილი",
+      "team": "ბილბაო",
+      "goals": 1,
+      "matchId": "group_1762509451595",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკა დონაძე",
+      "team": "კიდეკაია",
+      "goals": 2,
+      "matchId": "group_1762509451595",
+      "matchType": "group"
+    },
+    {
+      "player": "მერაბი ბოჭოიძე",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "group_1762509548241",
+      "matchType": "group"
+    },
+    {
+      "player": "ლუკა ნარსია",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "group_1762509548241",
+      "matchType": "group"
+    },
+    {
+      "player": "მიხეილ დადიანი",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "group_1762509548241",
+      "matchType": "group"
+    },
+    {
+      "player": "აკაკი ღაჭავა",
+      "team": "წერო",
+      "goals": 2,
+      "matchId": "group_1762509548241",
+      "matchType": "group"
+    },
+    {
+      "player": "გიორგი უგულავა",
+      "team": "წერო",
+      "goals": 1,
+      "matchId": "group_1762509548241",
+      "matchType": "group"
+    },
+    {
+      "player": "ანდრია კეკენაძე",
+      "team": "pawo",
+      "goals": 1,
+      "matchId": "group_1762510451226",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკოლოზ დონაძე",
+      "team": "pawo",
+      "goals": 1,
+      "matchId": "group_1762510451226",
+      "matchType": "group"
+    },
+    {
+      "player": "საბა ჩიჩუა",
+      "team": "pawo",
+      "goals": 1,
+      "matchId": "group_1762510451226",
+      "matchType": "group"
+    }
+  ],
+  "playoffMatches": {
+    "round16": [],
+    "quarter": [],
+    "semi": [],
+    "final": []
+  },
+  "exportDate": "2025-11-07T10:19:14.029Z"
+};
 
-        let teams = Object.keys(teamsData);
-        let groups = { A: [], B: [], C: [], D: [] };
-        let standings = { A: {}, B: {}, C: {}, D: {} };
-        let matches = [];
-        let scorers = [];
-        let playoffMatches = {
-            round16: [],
-            quarter: [],
-            semi: [],
-            final: []
-        };
-        let draggedTeam = null;
-        let currentPlayoffRound = 'round16';
-
-        // მონაცემების ჩატვირთვა localStorage-დან
-        function loadData() {
-            const savedGroups = localStorage.getItem('tournamentGroups');
-            const savedStandings = localStorage.getItem('tournamentStandings');
-            const savedMatches = localStorage.getItem('tournamentMatches');
-            const savedScorers = localStorage.getItem('tournamentScorers');
-            const savedPlayoffMatches = localStorage.getItem('tournamentPlayoffMatches');
-            
-            if (savedGroups) groups = JSON.parse(savedGroups);
-            if (savedStandings) standings = JSON.parse(savedStandings);
-            if (savedMatches) matches = JSON.parse(savedMatches);
-            if (savedScorers) scorers = JSON.parse(savedScorers);
-            if (savedPlayoffMatches) playoffMatches = JSON.parse(savedPlayoffMatches);
-            
-            updateAllDisplays();
-        }
-
-        // მონაცემების შენახვა localStorage-ში
-        function saveData() {
-            localStorage.setItem('tournamentGroups', JSON.stringify(groups));
-            localStorage.setItem('tournamentStandings', JSON.stringify(standings));
-            localStorage.setItem('tournamentMatches', JSON.stringify(matches));
-            localStorage.setItem('tournamentScorers', JSON.stringify(scorers));
-            localStorage.setItem('tournamentPlayoffMatches', JSON.stringify(playoffMatches));
-        }
-
-        // JSON მონაცემების ექსპორტი
-        function updateExportData() {
-            const exportData = {
-                groups: groups,
-                standings: standings,
-                matches: matches,
-                scorers: scorers,
-                playoffMatches: playoffMatches,
-                exportDate: new Date().toISOString()
-            };
-            
-            document.getElementById('exportData').value = JSON.stringify(exportData, null, 2);
-        }
-
-        function copyExportData() {
-            const textarea = document.getElementById('exportData');
-            textarea.select();
-            document.execCommand('copy');
-            alert('JSON მონაცემები დაკოპირდა!');
-        }
-
-        // JSON მონაცემების იმპორტი
-        function importData() {
-            const importText = document.getElementById('importData').value;
-            
-            if (!importText) {
-                alert('გთხოვთ ჩასვათ JSON მონაცემები!');
-                return;
-            }
-            
-            try {
-                const importedData = JSON.parse(importText);
-                
-                // ვალიდაცია
-                if (importedData.groups) groups = importedData.groups;
-                if (importedData.standings) standings = importedData.standings;
-                if (importedData.matches) matches = importedData.matches;
-                if (importedData.scorers) scorers = importedData.scorers;
-                if (importedData.playoffMatches) playoffMatches = importedData.playoffMatches;
-                
-                // შენახვა localStorage-ში
-                saveData();
-                
-                // განახლება
-                updateAllDisplays();
-                
-                alert('მონაცემები წარმატებით იმპორტირდა!');
-            } catch (error) {
-                alert('შეცდომა JSON მონაცემების გაშიფვრისას: ' + error.message);
-            }
-        }
-
-        function clearImportData() {
-            document.getElementById('importData').value = '';
-        }
-
-        function resetData() {
-            if (confirm('დარწმუნებული ხართ, რომ გსურთ ყველა მონაცემის წაშლა? ეს ქმედება შექცევადი არ არის!')) {
-                groups = { A: [], B: [], C: [], D: [] };
-                standings = { A: {}, B: {}, C: {}, D: {} };
-                matches = [];
-                scorers = [];
-                playoffMatches = {
-                    round16: [],
-                    quarter: [],
-                    semi: [],
-                    final: []
-                };
-                
-                localStorage.clear();
-                updateAllDisplays();
-                alert('ყველა მონაცემი წაიშალა!');
-            }
-        }
-
-        function updateAllDisplays() {
-            initTeams();
-            updateGroupDisplay();
-            updateStandings();
-            updatePlayoff();
-            updateScorerMatchSelect();
-            updateTopScorers();
-            updatePlayoffMatchSelect();
-            updateMatchValidation();
-        }
-
-        // შემოწმება არის თუ არა ჯგუფური ეტაპი დასრულებული
-        function isGroupStageComplete() {
-            for (let group in groups) {
-                const teamsInGroup = groups[group];
-                const maxMatches = (group === 'A' || group === 'B') ? 4 : 5;
-                
-                for (let team of teamsInGroup) {
-                    if (standings[group][team].played !== maxMatches) {
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }
-
-        // შემოწმება შეიძლება თუ არა ახალი თამაშის დამატება
-        function canAddMatch(group, homeTeam, awayTeam) {
-            const matchExists = matches.some(match => 
-                match.group === group && 
-                ((match.home === homeTeam && match.away === awayTeam) || 
-                 (match.home === awayTeam && match.away === homeTeam))
-            );
-            
-            if (matchExists) {
-                return false;
-            }
-            
-            const maxMatchesPerTeam = (group === 'A' || group === 'B') ? 4 : 5;
-            
-            if (standings[group][homeTeam].played >= maxMatchesPerTeam || 
-                standings[group][awayTeam].played >= maxMatchesPerTeam) {
-                return false;
-            }
-            
-            return true;
-        }
-
-        // პლეი-ოფის მატჩების გენერირება - განახლებული ვერსია
-        function generatePlayoffMatches() {
-            const qualified = {};
-            ['A', 'B', 'C', 'D'].forEach(group => {
-                const sorted = Object.entries(standings[group])
-                    .sort(([,a], [,b]) => b.points - a.points || b.gd - a.gd || b.gf - a.gf);
-                qualified[group] = sorted.slice(0, 3).map(([team]) => team);
-            });
-
-            // მერვედფინალის მატჩები
-            playoffMatches.round16 = [
-                { id: 1, team1: qualified.A[1], team2: qualified.B[2], score1: null, score2: null, penaltyScore1: null, penaltyScore2: null, winner: null, completed: false },
-                { id: 2, team1: qualified.B[1], team2: qualified.A[2], score1: null, score2: null, penaltyScore1: null, penaltyScore2: null, winner: null, completed: false },
-                { id: 3, team1: qualified.C[1], team2: qualified.D[2], score1: null, score2: null, penaltyScore1: null, penaltyScore2: null, winner: null, completed: false },
-                { id: 4, team1: qualified.D[1], team2: qualified.C[2], score1: null, score2: null, penaltyScore1: null, penaltyScore2: null, winner: null, completed: false }
-            ];
-
-            // მეოთხედფინალის მატჩები - განახლებული ლოგიკა
-            playoffMatches.quarter = [
-                { id: 5, team1: qualified.C[0], team2: null, score1: null, score2: null, penaltyScore1: null, penaltyScore2: null, winner: null, completed: false },
-                { id: 6, team1: qualified.D[0], team2: null, score1: null, score2: null, penaltyScore1: null, penaltyScore2: null, winner: null, completed: false },
-                { id: 7, team1: qualified.A[0], team2: null, score1: null, score2: null, penaltyScore1: null, penaltyScore2: null, winner: null, completed: false },
-                { id: 8, team1: qualified.B[0], team2: null, score1: null, score2: null, penaltyScore1: null, penaltyScore2: null, winner: null, completed: false }
-            ];
-
-            // ნახევარფინალის მატჩები - განახლებული ლოგიკა
-            playoffMatches.semi = [
-                { id: 9, team1: null, team2: null, score1: null, score2: null, penaltyScore1: null, penaltyScore2: null, winner: null, completed: false },
-                { id: 10, team1: null, team2: null, score1: null, score2: null, penaltyScore1: null, penaltyScore2: null, winner: null, completed: false }
-            ];
-
-            // ფინალი
-            playoffMatches.final = [
-                { id: 11, team1: null, team2: null, score1: null, score2: null, penaltyScore1: null, penaltyScore2: null, winner: null, completed: false }
-            ];
-        }
-
-        function initTeams() {
-            const pool = document.getElementById('teamsPool');
-            pool.innerHTML = '';
-            teams.forEach((team, index) => {
-                if (!isTeamInGroup(team)) {
-                    const card = document.createElement('div');
-                    card.className = 'team-card';
-                    card.draggable = true;
-                    card.textContent = team;
-                    card.ondragstart = drag;
-                    card.dataset.team = team;
-                    pool.appendChild(card);
-                }
-            });
-        }
-
-        function isTeamInGroup(team) {
-            return Object.values(groups).some(g => g.includes(team));
-        }
-
-        function drag(ev) {
-            draggedTeam = ev.target.dataset.team;
-            ev.target.classList.add('dragging');
-        }
-
-        function allowDrop(ev) {
-            ev.preventDefault();
-            ev.currentTarget.classList.add('drag-over');
-        }
-
-        function drop(ev) {
-            ev.preventDefault();
-            ev.currentTarget.classList.remove('drag-over');
-            const groupName = ev.currentTarget.dataset.group;
-            const maxTeams = groupName === 'A' || groupName === 'B' ? 5 : 6;
-            
-            if (groups[groupName].length < maxTeams && draggedTeam) {
-                if (!groups[groupName].includes(draggedTeam)) {
-                    groups[groupName].push(draggedTeam);
-                    standings[groupName][draggedTeam] = { played: 0, won: 0, drawn: 0, lost: 0, gf: 0, ga: 0, gd: 0, points: 0 };
-                    updateGroupDisplay();
-                    initTeams();
-                    saveData();
-                }
-            }
-            draggedTeam = null;
-        }
-
-        function removeTeam(group, team) {
-            groups[group] = groups[group].filter(t => t !== team);
-            delete standings[group][team];
-            updateGroupDisplay();
-            initTeams();
-            saveData();
-        }
+        let groups = tournamentData.groups;
+        let standings = tournamentData.standings;
+        let scorers = tournamentData.scorers;
+        let playoffMatches = tournamentData.playoffMatches;
 
         function updateGroupDisplay() {
             ['A', 'B', 'C', 'D'].forEach(group => {
@@ -986,137 +1083,10 @@
                 groups[group].forEach(team => {
                     const div = document.createElement('div');
                     div.className = 'group-team';
-                    div.innerHTML = `
-                        <span>${team}</span>
-                        <button class="remove-btn" onclick="removeTeam('${group}', '${team}')">✕</button>
-                    `;
+                    div.innerHTML = `<span>${team}</span>`;
                     container.appendChild(div);
                 });
             });
-            updateMatchSelects();
-            updateStandings();
-            updateScorerMatchSelect();
-        }
-
-        function updateMatchSelects() {
-            const group = document.getElementById('matchGroup').value;
-            const homeSelect = document.getElementById('homeTeam');
-            const awaySelect = document.getElementById('awayTeam');
-            
-            homeSelect.innerHTML = '<option value="">აირჩიეთ გუნდი</option>';
-            awaySelect.innerHTML = '<option value="">აირჩიეთ გუნდი</option>';
-            
-            groups[group].forEach(team => {
-                homeSelect.innerHTML += `<option value="${team}">${team}</option>`;
-                awaySelect.innerHTML += `<option value="${team}">${team}</option>`;
-            });
-            
-            updateMatchValidation();
-        }
-
-        function updateMatchValidation() {
-            const group = document.getElementById('matchGroup').value;
-            const homeTeam = document.getElementById('homeTeam').value;
-            const awayTeam = document.getElementById('awayTeam').value;
-            const warningDiv = document.getElementById('matchWarning');
-            const submitBtn = document.getElementById('submitMatchBtn');
-            
-            if (homeTeam && awayTeam && homeTeam !== awayTeam) {
-                if (canAddMatch(group, homeTeam, awayTeam)) {
-                    warningDiv.innerHTML = '';
-                    submitBtn.disabled = false;
-                } else {
-                    const maxMatchesPerTeam = (group === 'A' || group === 'B') ? 4 : 5;
-                    warningDiv.innerHTML = `
-                        <div class="warning-message">
-                            ეს თამაში ვერ დაემატება. შესაძლო მიზეზები:
-                            <ul>
-                                <li>ეს თამაში უკვე ჩატარებულია</li>
-                                <li>ერთ-ერთ გუნდს უკვე ჩაუტარებია ${maxMatchesPerTeam} თამაში</li>
-                            </ul>
-                        </div>
-                    `;
-                    submitBtn.disabled = true;
-                }
-            } else {
-                warningDiv.innerHTML = '';
-                submitBtn.disabled = true;
-            }
-        }
-
-        function submitMatch() {
-            const group = document.getElementById('matchGroup').value;
-            const home = document.getElementById('homeTeam').value;
-            const away = document.getElementById('awayTeam').value;
-            const homeScore = parseInt(document.getElementById('homeScore').value);
-            const awayScore = parseInt(document.getElementById('awayScore').value);
-
-            if (!home || !away || isNaN(homeScore) || isNaN(awayScore) || home === away) {
-                alert('გთხოვთ შეავსოთ ყველა ველი სწორად!');
-                return;
-            }
-
-            if (homeScore < 0 || awayScore < 0) {
-                alert('ანგარიში არ შეიძლება იყოს უარყოფითი!');
-                return;
-            }
-
-            if (!canAddMatch(group, home, away)) {
-                alert('ეს თამაში ვერ დაემატება! შესაძლოა ის უკვე ჩატარებულია ან ერთ-ერთ გუნდს აღარ აქვს თამაშების საშუალება.');
-                return;
-            }
-
-            const homeStats = standings[group][home];
-            const awayStats = standings[group][away];
-
-            homeStats.played++;
-            awayStats.played++;
-            homeStats.gf += homeScore;
-            homeStats.ga += awayScore;
-            awayStats.gf += awayScore;
-            awayStats.ga += homeScore;
-
-            if (homeScore > awayScore) {
-                homeStats.won++;
-                homeStats.points += 3;
-                awayStats.lost++;
-            } else if (homeScore < awayScore) {
-                awayStats.won++;
-                awayStats.points += 3;
-                homeStats.lost++;
-            } else {
-                homeStats.drawn++;
-                awayStats.drawn++;
-                homeStats.points++;
-                awayStats.points++;
-            }
-
-            homeStats.gd = homeStats.gf - homeStats.ga;
-            awayStats.gd = awayStats.gf - awayStats.ga;
-
-            matches.push({
-                group: group,
-                home: home,
-                away: away,
-                homeScore: homeScore,
-                awayScore: awayScore,
-                id: Date.now()
-            });
-
-            document.getElementById('homeScore').value = '';
-            document.getElementById('awayScore').value = '';
-            updateStandings();
-            
-            if (isGroupStageComplete()) {
-                generatePlayoffMatches();
-                alert('ჯგუფური ეტაპი დასრულდა! პლეი-ოფის მატჩები გენერირებულია.');
-            }
-            
-            updatePlayoff();
-            updateScorerMatchSelect();
-            updateMatchValidation();
-            saveData();
-            alert('შედეგი წარმატებით დაემატა!');
         }
 
         function updateStandings() {
@@ -1169,406 +1139,103 @@
             const statusContainer = document.getElementById('groupStageStatus');
             const bracket = document.getElementById('bracketContainer');
             
-            if (isGroupStageComplete()) {
-                statusContainer.innerHTML = '<div class="stage-complete">ჯგუფური ეტაპი დასრულებულია! პლეი-ოფის ეტაპი დაიწყო.</div>';
-                
-                bracket.innerHTML = `
-                    <div class="bracket-round">
-                        <h3 style="text-align: center; color: #667eea;">მერვედფინალი</h3>
-                        ${playoffMatches.round16.map(match => `
-                            <div class="bracket-match">
-                                <div class="bracket-team ${match.winner === match.team1 ? 'qualified' : ''}">
-                                    ${match.team1} 
-                                    ${match.score1 !== null ? 
-                                        (match.penaltyScore1 !== null ? 
-                                            `${match.score1}(${match.penaltyScore1})` : 
-                                            match.score1) : 
-                                        ''}
-                                </div>
-                                <div class="bracket-team ${match.winner === match.team2 ? 'qualified' : ''}">
-                                    ${match.team2} 
-                                    ${match.score2 !== null ? 
-                                        (match.penaltyScore2 !== null ? 
-                                            `${match.score2}(${match.penaltyScore2})` : 
-                                            match.score2) : 
-                                        ''}
-                                </div>
+            // აქ შეგიძლიათ დაამატოთ ლოგიკა პლეი-ოფის სტატუსის შესამოწმებლად
+            statusContainer.innerHTML = '';
+            
+            bracket.innerHTML = `
+                <div class="bracket-round">
+                    <h3 style="text-align: center; color: #667eea;">მერვედფინალი</h3>
+                    ${playoffMatches.round16.map(match => `
+                        <div class="bracket-match">
+                            <div class="bracket-team ${match.winner === match.team1 ? 'qualified' : ''}">
+                                ${match.team1} 
+                                ${match.score1 !== null ? 
+                                    (match.penaltyScore1 !== null ? 
+                                        `${match.score1}(${match.penaltyScore1})` : 
+                                        match.score1) : 
+                                    ''}
                             </div>
-                        `).join('')}
-                    </div>
-                    <div class="bracket-round">
-                        <h3 style="text-align: center; color: #667eea;">მეოთხედფინალი</h3>
-                        ${playoffMatches.quarter.map(match => `
-                            <div class="bracket-match">
-                                <div class="bracket-team ${match.winner === match.team1 ? 'qualified' : ''}">
-                                    ${match.team1 || 'TBD'} 
-                                    ${match.score1 !== null ? 
-                                        (match.penaltyScore1 !== null ? 
-                                            `${match.score1}(${match.penaltyScore1})` : 
-                                            match.score1) : 
-                                        ''}
-                                </div>
-                                <div class="bracket-team ${match.winner === match.team2 ? 'qualified' : ''}">
-                                    ${match.team2 || 'TBD'} 
-                                    ${match.score2 !== null ? 
-                                        (match.penaltyScore2 !== null ? 
-                                            `${match.score2}(${match.penaltyScore2})` : 
-                                            match.score2) : 
-                                        ''}
-                                </div>
+                            <div class="bracket-team ${match.winner === match.team2 ? 'qualified' : ''}">
+                                ${match.team2} 
+                                ${match.score2 !== null ? 
+                                    (match.penaltyScore2 !== null ? 
+                                        `${match.score2}(${match.penaltyScore2})` : 
+                                        match.score2) : 
+                                    ''}
                             </div>
-                        `).join('')}
-                    </div>
-                    <div class="bracket-round">
-                        <h3 style="text-align: center; color: #667eea;">ნახევარფინალი</h3>
-                        ${playoffMatches.semi.map(match => `
-                            <div class="bracket-match">
-                                <div class="bracket-team ${match.winner === match.team1 ? 'qualified' : ''}">
-                                    ${match.team1 || 'TBD'} 
-                                    ${match.score1 !== null ? 
-                                        (match.penaltyScore1 !== null ? 
-                                            `${match.score1}(${match.penaltyScore1})` : 
-                                            match.score1) : 
-                                        ''}
-                                </div>
-                                <div class="bracket-team ${match.winner === match.team2 ? 'qualified' : ''}">
-                                    ${match.team2 || 'TBD'} 
-                                    ${match.score2 !== null ? 
-                                        (match.penaltyScore2 !== null ? 
-                                            `${match.score2}(${match.penaltyScore2})` : 
-                                            match.score2) : 
-                                        ''}
-                                </div>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="bracket-round">
+                    <h3 style="text-align: center; color: #667eea;">მეოთხედფინალი</h3>
+                    ${playoffMatches.quarter.map(match => `
+                        <div class="bracket-match">
+                            <div class="bracket-team ${match.winner === match.team1 ? 'qualified' : ''}">
+                                ${match.team1 || 'TBD'} 
+                                ${match.score1 !== null ? 
+                                    (match.penaltyScore1 !== null ? 
+                                        `${match.score1}(${match.penaltyScore1})` : 
+                                        match.score1) : 
+                                    ''}
                             </div>
-                        `).join('')}
-                    </div>
-                    <div class="bracket-round">
-                        <h3 style="text-align: center; color: #667eea;">ფინალი</h3>
-                        ${playoffMatches.final.map(match => `
-                            <div class="bracket-match">
-                                <div class="bracket-team ${match.winner === match.team1 ? 'qualified' : ''}">
-                                    ${match.team1 || 'TBD'} 
-                                    ${match.score1 !== null ? 
-                                        (match.penaltyScore1 !== null ? 
-                                            `${match.score1}(${match.penaltyScore1})` : 
-                                            match.score1) : 
-                                        ''}
-                                </div>
-                                <div class="bracket-team ${match.winner === match.team2 ? 'qualified' : ''}">
-                                    ${match.team2 || 'TBD'} 
-                                    ${match.score2 !== null ? 
-                                        (match.penaltyScore2 !== null ? 
-                                            `${match.score2}(${match.penaltyScore2})` : 
-                                            match.score2) : 
-                                        ''}
-                                </div>
+                            <div class="bracket-team ${match.winner === match.team2 ? 'qualified' : ''}">
+                                ${match.team2 || 'TBD'} 
+                                ${match.score2 !== null ? 
+                                    (match.penaltyScore2 !== null ? 
+                                        `${match.score2}(${match.penaltyScore2})` : 
+                                        match.score2) : 
+                                    ''}
                             </div>
-                        `).join('')}
-                    </div>
-                `;
-            } else {
-                statusContainer.innerHTML = '<div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin-top: 15px; text-align: center; font-weight: bold; color: #856404;">ჯგუფური ეტაპი ჯერ არ არის დასრულებული.</div>';
-                
-                const qualified = {};
-                ['A', 'B', 'C', 'D'].forEach(group => {
-                    const sorted = Object.entries(standings[group])
-                        .sort(([,a], [,b]) => b.points - a.points || b.gd - a.gd || b.gf - a.gf);
-                    qualified[group] = sorted.slice(0, 3).map(([team]) => team);
-                });
-
-                bracket.innerHTML = `
-                    <div class="bracket-round">
-                        <h3 style="text-align: center; color: #667eea;">მერვედფინალი</h3>
-                        <div class="bracket-match">
-                            <div class="bracket-team">${qualified.A?.[1] || 'A-2'}</div>
-                            <div class="bracket-team">${qualified.B?.[2] || 'B-3'}</div>
                         </div>
+                    `).join('')}
+                </div>
+                <div class="bracket-round">
+                    <h3 style="text-align: center; color: #667eea;">ნახევარფინალი</h3>
+                    ${playoffMatches.semi.map(match => `
                         <div class="bracket-match">
-                            <div class="bracket-team">${qualified.B?.[1] || 'B-2'}</div>
-                            <div class="bracket-team">${qualified.A?.[2] || 'A-3'}</div>
+                            <div class="bracket-team ${match.winner === match.team1 ? 'qualified' : ''}">
+                                ${match.team1 || 'TBD'} 
+                                ${match.score1 !== null ? 
+                                    (match.penaltyScore1 !== null ? 
+                                        `${match.score1}(${match.penaltyScore1})` : 
+                                        match.score1) : 
+                                    ''}
+                            </div>
+                            <div class="bracket-team ${match.winner === match.team2 ? 'qualified' : ''}">
+                                ${match.team2 || 'TBD'} 
+                                ${match.score2 !== null ? 
+                                    (match.penaltyScore2 !== null ? 
+                                        `${match.score2}(${match.penaltyScore2})` : 
+                                        match.score2) : 
+                                    ''}
+                            </div>
                         </div>
+                    `).join('')}
+                </div>
+                <div class="bracket-round">
+                    <h3 style="text-align: center; color: #667eea;">ფინალი</h3>
+                    ${playoffMatches.final.map(match => `
                         <div class="bracket-match">
-                            <div class="bracket-team">${qualified.C?.[1] || 'C-2'}</div>
-                            <div class="bracket-team">${qualified.D?.[2] || 'D-3'}</div>
+                            <div class="bracket-team ${match.winner === match.team1 ? 'qualified' : ''}">
+                                ${match.team1 || 'TBD'} 
+                                ${match.score1 !== null ? 
+                                    (match.penaltyScore1 !== null ? 
+                                        `${match.score1}(${match.penaltyScore1})` : 
+                                        match.score1) : 
+                                    ''}
+                            </div>
+                            <div class="bracket-team ${match.winner === match.team2 ? 'qualified' : ''}">
+                                ${match.team2 || 'TBD'} 
+                                ${match.score2 !== null ? 
+                                    (match.penaltyScore2 !== null ? 
+                                        `${match.score2}(${match.penaltyScore2})` : 
+                                        match.score2) : 
+                                    ''}
+                            </div>
                         </div>
-                        <div class="bracket-match">
-                            <div class="bracket-team">${qualified.D?.[1] || 'D-2'}</div>
-                            <div class="bracket-team">${qualified.C?.[2] || 'C-3'}</div>
-                        </div>
-                    </div>
-                    <div class="bracket-round">
-                        <h3 style="text-align: center; color: #667eea;">მეოთხედფინალი</h3>
-                        <div class="bracket-match">
-                            <div class="bracket-team">${qualified.C?.[0] || 'C-1'}</div>
-                            <div class="bracket-team">გამარჯვებული 1</div>
-                        </div>
-                        <div class="bracket-match">
-                            <div class="bracket-team">${qualified.D?.[0] || 'D-1'}</div>
-                            <div class="bracket-team">გამარჯვებული 2</div>
-                        </div>
-                        <div class="bracket-match">
-                            <div class="bracket-team">${qualified.A?.[0] || 'A-1'}</div>
-                            <div class="bracket-team">გამარჯვებული 3</div>
-                        </div>
-                        <div class="bracket-match">
-                            <div class="bracket-team">${qualified.B?.[0] || 'B-1'}</div>
-                            <div class="bracket-team">გამარჯვებული 4</div>
-                        </div>
-                    </div>
-                    <div class="bracket-round">
-                        <h3 style="text-align: center; color: #667eea;">ნახევარფინალი</h3>
-                        <div class="bracket-match">
-                            <div class="bracket-team">გამარჯვებული QF1</div>
-                            <div class="bracket-team">გამარჯვებული QF2</div>
-                        </div>
-                        <div class="bracket-match">
-                            <div class="bracket-team">გამარჯვებული QF3</div>
-                            <div class="bracket-team">გამარჯვებული QF4</div>
-                        </div>
-                    </div>
-                    <div class="bracket-round">
-                        <h3 style="text-align: center; color: #667eea;">ფინალი</h3>
-                        <div class="bracket-match">
-                            <div class="bracket-team">გამარჯვებული SF1</div>
-                            <div class="bracket-team">გამარჯვებული SF2</div>
-                        </div>
-                    </div>
-                `;
-            }
-        }
-
-        function showTab(tabName) {
-            document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
-            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
-            
-            if (tabName === 'scorers') {
-                updateScorerMatchSelect();
-                updateTopScorers();
-            } else if (tabName === 'playoffManagement') {
-                updatePlayoffMatchSelect();
-            } else if (tabName === 'dataManagement') {
-                updateExportData();
-            }
-        }
-
-        // ბომბარდირების ფუნქციონალი - განახლებული ვერსია პლეი-ოფის გოლების ჩათვლით
-        function updateScorerMatchSelect() {
-            const select = document.getElementById('scorerMatch');
-            select.innerHTML = '<option value="">აირჩიეთ თამაში</option>';
-            
-            // დავამატოთ ჯგუფური ეტაპის თამაშები
-            matches.forEach(match => {
-                const option = document.createElement('option');
-                option.value = `group_${match.id}`;
-                option.textContent = `${match.home} ${match.homeScore} - ${match.awayScore} ${match.away} (ჯგუფი ${match.group})`;
-                select.appendChild(option);
-            });
-            
-            // დავამატოთ პლეი-ოფის თამაშები
-            Object.entries(playoffMatches).forEach(([round, roundMatches]) => {
-                roundMatches.forEach(match => {
-                    if (match.score1 !== null && match.score2 !== null) {
-                        const roundNames = {
-                            'round16': 'მერვედფინალი',
-                            'quarter': 'მეოთხედფინალი',
-                            'semi': 'ნახევარფინალი',
-                            'final': 'ფინალი'
-                        };
-                        
-                        const option = document.createElement('option');
-                        option.value = `playoff_${round}_${match.id}`;
-                        
-                        // ჩავსვათ პენალტების ინფორმაცია თუ არსებობს
-                        let scoreDisplay = `${match.score1} - ${match.score2}`;
-                        if (match.penaltyScore1 !== null && match.penaltyScore2 !== null) {
-                            scoreDisplay = `${match.score1}(${match.penaltyScore1}) - ${match.score2}(${match.penaltyScore2})`;
-                        }
-                        
-                        option.textContent = `${match.team1} ${scoreDisplay} ${match.team2} (${roundNames[round]})`;
-                        select.appendChild(option);
-                    }
-                });
-            });
-        }
-
-        function addScorer() {
-            const scorersList = document.getElementById('scorersList');
-            const matchSelect = document.getElementById('scorerMatch');
-            const matchValue = matchSelect.value;
-            
-            if (!matchValue) {
-                alert('გთხოვთ აირჩიოთ თამაში!');
-                return;
-            }
-            
-            const [type, ...rest] = matchValue.split('_');
-            let match, teams;
-            
-            if (type === 'group') {
-                const matchId = parseInt(rest[0]);
-                match = matches.find(m => m.id === matchId);
-                teams = [match.home, match.away];
-            } else if (type === 'playoff') {
-                const round = rest[0];
-                const matchId = parseInt(rest[1]);
-                match = playoffMatches[round].find(m => m.id === matchId);
-                teams = [match.team1, match.team2];
-            }
-            
-            if (!match) return;
-            
-            const scorerItem = document.createElement('div');
-            scorerItem.className = 'scorer-item';
-            scorerItem.innerHTML = `
-                <select class="scorer-team" onchange="updatePlayerOptions(this)">
-                    <option value="">აირჩიეთ გუნდი</option>
-                    <option value="${teams[0]}">${teams[0]}</option>
-                    <option value="${teams[1]}">${teams[1]}</option>
-                </select>
-                <select class="scorer-player">
-                    <option value="">აირჩიეთ მოთამაშე</option>
-                </select>
-                <input type="number" class="scorer-goals" min="0" value="1" placeholder="გოლები" oninput="validateGoalInput(this)">
-                <button class="remove-scorer-btn" onclick="this.parentElement.remove()">✕</button>
+                    `).join('')}
+                </div>
             `;
-            
-            scorersList.appendChild(scorerItem);
-        }
-
-        // ვალიდაცია გოლების შეყვანისთვის
-        function validateGoalInput(input) {
-            if (input.value < 0) {
-                input.value = 0;
-                alert('გოლების რაოდენობა არ შეიძლება იყოს უარყოფითი!');
-            }
-        }
-
-        function updatePlayerOptions(teamSelect) {
-            const team = teamSelect.value;
-            const playerSelect = teamSelect.parentElement.querySelector('.scorer-player');
-            
-            playerSelect.innerHTML = '<option value="">აირჩიეთ მოთამაშე</option>';
-            
-            if (team && teamsData[team]) {
-                teamsData[team].forEach(player => {
-                    const option = document.createElement('option');
-                    option.value = player;
-                    option.textContent = player;
-                    playerSelect.appendChild(option);
-                });
-            }
-        }
-
-        function submitScorers() {
-            const matchSelect = document.getElementById('scorerMatch');
-            const matchValue = matchSelect.value;
-            
-            if (!matchValue) {
-                alert('გთხოვთ აირჩიოთ თამაში!');
-                return;
-            }
-            
-            const [type, ...rest] = matchValue.split('_');
-            let match;
-            
-            if (type === 'group') {
-                const matchId = parseInt(rest[0]);
-                match = matches.find(m => m.id === matchId);
-            } else if (type === 'playoff') {
-                const round = rest[0];
-                const matchId = parseInt(rest[1]);
-                match = playoffMatches[round].find(m => m.id === matchId);
-            }
-            
-            if (!match) return;
-            
-            const scorerItems = document.querySelectorAll('.scorer-item');
-            let totalGoals = 0;
-            const teamGoals = {};
-            
-            // განვსაზღვროთ გუნდები
-            let team1, team2, maxGoals1, maxGoals2;
-            
-            if (type === 'group') {
-                team1 = match.home;
-                team2 = match.away;
-                maxGoals1 = match.homeScore;
-                maxGoals2 = match.awayScore;
-            } else {
-                team1 = match.team1;
-                team2 = match.team2;
-                maxGoals1 = match.score1;
-                maxGoals2 = match.score2;
-            }
-            
-            teamGoals[team1] = 0;
-            teamGoals[team2] = 0;
-            
-            // წავშალოთ ყველა ძველი გოლი ამ მატჩისთვის
-            scorers = scorers.filter(s => s.matchId !== matchValue);
-            
-            scorerItems.forEach(item => {
-                const team = item.querySelector('.scorer-team').value;
-                const player = item.querySelector('.scorer-player').value;
-                const goals = parseInt(item.querySelector('.scorer-goals').value);
-                
-                if (team && player && !isNaN(goals) && goals >= 0) {
-                    if (goals === 0) {
-                        // 0 გოლი არ დავამატოთ
-                        return;
-                    }
-                    
-                    if (!teamsData[team].includes(player)) {
-                        alert(`მოთამაშე "${player}" არ არის გუნდ "${team}"-ის შემადგენლობაში!`);
-                        return;
-                    }
-                    
-                    const maxGoalsForTeam = team === team1 ? maxGoals1 : maxGoals2;
-                    if (goals > maxGoalsForTeam) {
-                        alert(`მოთამაშე "${player}" არ შეიძლება გაიტანოს ${goals} გოლი, რადგან მისმა გუნდმა "${team}" მხოლოდ ${maxGoalsForTeam} გოლი გაიტანა ამ თამაშში!`);
-                        return;
-                    }
-                    
-                    scorers.push({
-                        player: player,
-                        team: team,
-                        goals: goals,
-                        matchId: matchValue,
-                        matchType: type
-                    });
-                    
-                    teamGoals[team] += goals;
-                    totalGoals += goals;
-                }
-            });
-            
-            const matchTotalGoals = maxGoals1 + maxGoals2;
-            if (totalGoals > matchTotalGoals) {
-                alert(`შეყვანილი გოლების რაოდენობა (${totalGoals}) აღემატება თამაშის ჯამურ გოლებს (${matchTotalGoals})!`);
-                scorers = scorers.filter(s => s.matchId !== matchValue);
-                return;
-            }
-            
-            if (teamGoals[team1] > maxGoals1) {
-                alert(`გუნდ "${team1}"-ის მოთამაშეებს შეყვანილი აქვთ ${teamGoals[team1]} გოლი, მაგრამ გუნდმა მხოლოდ ${maxGoals1} გოლი გაიტანა!`);
-                scorers = scorers.filter(s => s.matchId !== matchValue);
-                return;
-            }
-            
-            if (teamGoals[team2] > maxGoals2) {
-                alert(`გუნდ "${team2}"-ის მოთამაშეებს შეყვანილი აქვთ ${teamGoals[team2]} გოლი, მაგრამ გუნდმა მხოლოდ ${maxGoals2} გოლი გაიტანა!`);
-                scorers = scorers.filter(s => s.matchId !== matchValue);
-                return;
-            }
-            
-            document.getElementById('scorersList').innerHTML = '';
-            matchSelect.value = '';
-            
-            updateTopScorers();
-            saveData();
-            alert('გოლები წარმატებით დაემატა!');
         }
 
         function updateTopScorers() {
@@ -1620,208 +1287,18 @@
             `;
         }
 
-        // პლეი-ოფის მართვის ფუნქციონალი - განახლებული ვერსია
-        function selectPlayoffRound(round) {
-            currentPlayoffRound = round;
-            document.querySelectorAll('.round-btn').forEach(btn => btn.classList.remove('active'));
+        function showTab(tabName) {
+            document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
             event.target.classList.add('active');
-            updatePlayoffMatchSelect();
         }
-
-        function updatePlayoffMatchSelect() {
-            const select = document.getElementById('playoffMatchSelect');
-            select.innerHTML = '<option value="">აირჩიეთ თამაში</option>';
-            
-            if (playoffMatches[currentPlayoffRound]) {
-                playoffMatches[currentPlayoffRound].forEach((match, index) => {
-                    const option = document.createElement('option');
-                    option.value = index;
-                    
-                    // ჩავსვათ პენალტების ინფორმაცია თუ არსებობს
-                    let scoreDisplay = '';
-                    if (match.score1 !== null && match.score2 !== null) {
-                        scoreDisplay = ` - ${match.score1} - ${match.score2}`;
-                        if (match.penaltyScore1 !== null && match.penaltyScore2 !== null) {
-                            scoreDisplay = ` - ${match.score1}(${match.penaltyScore1}) - ${match.score2}(${match.penaltyScore2})`;
-                        }
-                    }
-                    
-                    option.textContent = `თამაში ${index + 1}: ${match.team1 || 'TBD'}${scoreDisplay} ${match.team2 || 'TBD'}`;
-                    select.appendChild(option);
-                });
-            }
-        }
-
-        function submitPlayoffMatch() {
-            const matchIndex = document.getElementById('playoffMatchSelect').value;
-            const score1 = parseInt(document.getElementById('playoffScore1').value);
-            const score2 = parseInt(document.getElementById('playoffScore2').value);
-            
-            if (matchIndex === "" || isNaN(score1) || isNaN(score2)) {
-                alert('გთხოვთ შეავსოთ ყველა ველი სწორად!');
-                return;
-            }
-
-            if (score1 < 0 || score2 < 0) {
-                alert('ანგარიში არ შეიძლება იყოს უარყოფითი!');
-                return;
-            }
-            
-            const match = playoffMatches[currentPlayoffRound][matchIndex];
-            match.score1 = score1;
-            match.score2 = score2;
-            
-            // შევამოწმოთ არის თუ არა თამაში ფრე
-            if (score1 === score2) {
-                // თამაში ფრედ დასრულდა, მოვითხოვოთ პენალტების შედეგები
-                const penaltyScore1 = parseInt(document.getElementById('penaltyScore1').value);
-                const penaltyScore2 = parseInt(document.getElementById('penaltyScore2').value);
-                
-                if (isNaN(penaltyScore1) || isNaN(penaltyScore2)) {
-                    alert('თამაში ფრედ დასრულდა! გთხოვთ შეავსოთ პენალტების ველები!');
-                    return;
-                }
-
-                if (penaltyScore1 < 0 || penaltyScore2 < 0) {
-                    alert('პენალტების რაოდენობა არ შეიძლება იყოს უარყოფითი!');
-                    return;
-                }
-
-                if (penaltyScore1 === penaltyScore2) {
-                    alert('პენალტების რაოდენობა არ შეიძლება იყოს ტოლი! გთხოვთ შეიყვანოთ სხვადასხვა მნიშვნელობები.');
-                    return;
-                }
-                
-                match.penaltyScore1 = penaltyScore1;
-                match.penaltyScore2 = penaltyScore2;
-                match.completed = true;
-                
-                if (penaltyScore1 > penaltyScore2) {
-                    match.winner = match.team1;
-                } else {
-                    match.winner = match.team2;
-                }
-            } else {
-                // რეგულარული დრო
-                match.completed = true;
-                match.penaltyScore1 = null;
-                match.penaltyScore2 = null;
-                
-                if (score1 > score2) {
-                    match.winner = match.team1;
-                } else {
-                    match.winner = match.team2;
-                }
-            }
-            
-            // განვაახლოთ შემდეგი ეტაპის მატჩები
-            updateNextRoundMatches(currentPlayoffRound, matchIndex, match.winner);
-            
-            document.getElementById('playoffScore1').value = '';
-            document.getElementById('playoffScore2').value = '';
-            document.getElementById('penaltyScore1').value = '';
-            document.getElementById('penaltyScore2').value = '';
-            document.getElementById('penaltyGroup').classList.remove('active');
-            
-            updatePlayoff();
-            updatePlayoffMatchSelect();
-            updateScorerMatchSelect(); // განვაახლოთ ბომბარდირების სექციაში პლეი-ოფის თამაშები
-            saveData();
-            alert('პლეი-ოფის თამაშის შედეგი წარმატებით დაემატა!');
-        }
-
-        function updateNextRoundMatches(currentRound, matchIndex, winner) {
-            console.log(`Updating next round: ${currentRound}, match ${matchIndex}, winner: ${winner}`);
-            
-            if (currentRound === 'round16') {
-                // მერვედფინალიდან მეოთხედფინალში - განახლებული ლოგიკა
-                if (matchIndex == 0) {
-                    playoffMatches.quarter[0].team2 = winner;
-                } else if (matchIndex == 1) {
-                    playoffMatches.quarter[1].team2 = winner;
-                } else if (matchIndex == 2) {
-                    playoffMatches.quarter[2].team2 = winner;
-                } else if (matchIndex == 3) {
-                    playoffMatches.quarter[3].team2 = winner;
-                }
-                
-                console.log('Quarter finals after update:', playoffMatches.quarter);
-            } else if (currentRound === 'quarter') {
-                // მეოთხედფინალიდან ნახევარფინალში - განახლებული ლოგიკა
-                if (matchIndex == 0) {
-                    playoffMatches.semi[0].team1 = winner;
-                } else if (matchIndex == 1) {
-                    playoffMatches.semi[0].team2 = winner;
-                } else if (matchIndex == 2) {
-                    playoffMatches.semi[1].team1 = winner;
-                } else if (matchIndex == 3) {
-                    playoffMatches.semi[1].team2 = winner;
-                }
-                
-                console.log('Semi finals after update:', playoffMatches.semi);
-            } else if (currentRound === 'semi') {
-                // ნახევარფინალიდან ფინალში
-                if (matchIndex == 0) {
-                    playoffMatches.final[0].team1 = winner;
-                } else {
-                    playoffMatches.final[0].team2 = winner;
-                }
-                
-                console.log('Final after update:', playoffMatches.final);
-            }
-            
-            // დავრწმუნდეთ, რომ ცვლილებები ინახება
-            saveData();
-        }
-
-        // ფუნქცია პენალტების ველების გამოსაჩენად/დასამალად
-        function togglePenaltyInputs() {
-            const score1 = parseInt(document.getElementById('playoffScore1').value);
-            const score2 = parseInt(document.getElementById('playoffScore2').value);
-            const penaltyGroup = document.getElementById('penaltyGroup');
-            
-            if (!isNaN(score1) && !isNaN(score2) && score1 === score2) {
-                penaltyGroup.classList.add('active');
-            } else {
-                penaltyGroup.classList.remove('active');
-                document.getElementById('penaltyScore1').value = '';
-                document.getElementById('penaltyScore2').value = '';
-            }
-        }
-
-        document.getElementById('matchGroup').addEventListener('change', updateMatchSelects);
-        document.getElementById('homeTeam').addEventListener('change', updateMatchValidation);
-        document.getElementById('awayTeam').addEventListener('change', updateMatchValidation);
-        document.getElementById('playoffScore1').addEventListener('input', togglePenaltyInputs);
-        document.getElementById('playoffScore2').addEventListener('input', togglePenaltyInputs);
-        
-        document.getElementById('playoffMatchSelect').addEventListener('change', function() {
-            const matchIndex = this.value;
-            if (matchIndex !== "") {
-                const match = playoffMatches[currentPlayoffRound][matchIndex];
-                document.getElementById('playoffTeam1').value = match.team1 || 'TBD';
-                document.getElementById('playoffTeam2').value = match.team2 || 'TBD';
-                document.getElementById('playoffScore1').value = match.score1 || '';
-                document.getElementById('playoffScore2').value = match.score2 || '';
-                document.getElementById('penaltyScore1').value = match.penaltyScore1 || '';
-                document.getElementById('penaltyScore2').value = match.penaltyScore2 || '';
-                
-                // შევამოწმოთ უნდა ჩანდეს თუ არა პენალტების ველი
-                togglePenaltyInputs();
-            } else {
-                document.getElementById('penaltyGroup').classList.remove('active');
-            }
-        });
 
         // ინიციალიზაცია
-        loadData();
-        initTeams();
+        updateGroupDisplay();
         updateStandings();
         updatePlayoff();
-        updateScorerMatchSelect();
         updateTopScorers();
-        updatePlayoffMatchSelect();
-        updateMatchValidation();
     </script>
 </body>
 </html>
