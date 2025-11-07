@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CACHE PREVENTION -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
     <title>ფეხბურთის ჩემპიონატი</title>
     <style>
         * {
@@ -120,6 +126,7 @@
             align-items: center;
         }
 
+        /* ძველი დიზაინი ტურნირის ცხრილისთვის */
         .standings-table {
             width: 100%;
             background: white;
@@ -208,11 +215,53 @@
             color: #155724;
         }
 
+        /* მობილურისთვის ოპტიმიზირებული დიზაინი მხოლოდ ბომბარდირებისთვის */
         .scorers-list {
             background: white;
             padding: 20px;
             border-radius: 10px;
             margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .scorers-list .standings-table {
+            overflow-x: auto;
+        }
+
+        .scorers-list .standings-table table {
+            min-width: 500px;
+        }
+
+        @media (max-width: 768px) {
+            .scorers-list .standings-table th {
+                padding: 10px 8px;
+                font-size: 13px;
+            }
+            
+            .scorers-list .standings-table td {
+                padding: 8px 6px;
+                font-size: 13px;
+            }
+            
+            .scorers-list {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .scorers-list .standings-table th {
+                padding: 8px 6px;
+                font-size: 12px;
+            }
+            
+            .scorers-list .standings-table td {
+                padding: 6px 4px;
+                font-size: 12px;
+            }
+            
+            .scorers-list .standings-table table {
+                min-width: 400px;
+            }
         }
     </style>
 </head>
@@ -276,541 +325,804 @@
     </div>
 
     <script>
+        // Add cache busting - force reload if page was cached
+        if (window.performance && window.performance.navigation.type === 2) {
+            window.location.reload();
+        }
+
         // მონაცემები JSON-დან
         const tournamentData = {
   "groups": {
     "A": [
-      "Test Team 1",
-      "Test Team 2", 
-      "Test Team 3",
-      "Test Team 4",
-      "Test Team 5"
+      "FC Kiutletiko",
+      "FC QSOVROSTVIS",
+      "ამბიდექსტერი",
+      "Trinity",
+      "GSE"
     ],
     "B": [
-      "Demo Team A",
-      "Demo Team B",
-      "Demo Team C",
-      "Demo Team D",
-      "Demo Team E"
+      "SE7EN",
+      "Q",
+      "BMF",
+      "pawo",
+      "ციხე"
     ],
     "C": [
-      "Sample Team 1",
-      "Sample Team 2",
-      "Sample Team 3",
-      "Sample Team 4",
-      "Sample Team 5",
-      "Sample Team 6"
+      "დიდი გზა",
+      "არა",
+      "ბოლოსწინა სეზონი",
+      "საძმოს წევრები",
+      "Blonde Lovers",
+      "პომპეი"
     ],
     "D": [
-      "Example Team 1",
-      "Example Team 2", 
-      "Example Team 3",
-      "Example Team 4",
-      "Example Team 5",
-      "Example Team 6"
+      "თუ მაჩ",
+      "ბილბაო",
+      "წერო",
+      "კიდეკაია",
+      "Nageci",
+      "გოლანდი"
     ]
   },
   "standings": {
     "A": {
-      "Test Team 1": {
-        "played": 4,
-        "won": 3,
-        "drawn": 1,
-        "lost": 0,
-        "gf": 8,
-        "ga": 2,
-        "gd": 6,
-        "points": 10
-      },
-      "Test Team 2": {
-        "played": 4,
-        "won": 2,
-        "drawn": 1,
+      "FC Kiutletiko": {
+        "played": 2,
+        "won": 1,
+        "drawn": 0,
         "lost": 1,
-        "gf": 5,
+        "gf": 2,
         "ga": 3,
-        "gd": 2,
-        "points": 7
+        "gd": -1,
+        "points": 3
       },
-      "Test Team 3": {
-        "played": 4,
-        "won": 2,
+      "FC QSOVROSTVIS": {
+        "played": 2,
+        "won": 1,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 2,
+        "ga": 1,
+        "gd": 1,
+        "points": 3
+      },
+      "ამბიდექსტერი": {
+        "played": 3,
+        "won": 1,
         "drawn": 0,
         "lost": 2,
-        "gf": 4,
-        "ga": 5,
-        "gd": -1,
+        "gf": 2,
+        "ga": 4,
+        "gd": -2,
+        "points": 3
+      },
+      "Trinity": {
+        "played": 2,
+        "won": 2,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 5,
+        "ga": 1,
+        "gd": 4,
         "points": 6
       },
-      "Test Team 4": {
-        "played": 4,
-        "won": 1,
-        "drawn": 1,
-        "lost": 2,
-        "gf": 3,
-        "ga": 4,
-        "gd": -1,
-        "points": 4
-      },
-      "Test Team 5": {
-        "played": 4,
-        "won": 0,
-        "drawn": 1,
-        "lost": 3,
-        "gf": 1,
-        "ga": 7,
-        "gd": -6,
-        "points": 1
-      }
-    },
-    "B": {
-      "Demo Team A": {
-        "played": 4,
-        "won": 4,
-        "drawn": 0,
-        "lost": 0,
-        "gf": 10,
-        "ga": 1,
-        "gd": 9,
-        "points": 12
-      },
-      "Demo Team B": {
-        "played": 4,
-        "won": 2,
-        "drawn": 1,
-        "lost": 1,
-        "gf": 6,
-        "ga": 4,
-        "gd": 2,
-        "points": 7
-      },
-      "Demo Team C": {
-        "played": 4,
-        "won": 1,
-        "drawn": 2,
-        "lost": 1,
-        "gf": 4,
-        "ga": 4,
-        "gd": 0,
-        "points": 5
-      },
-      "Demo Team D": {
-        "played": 4,
-        "won": 1,
-        "drawn": 1,
-        "lost": 2,
-        "gf": 3,
-        "ga": 6,
-        "gd": -3,
-        "points": 4
-      },
-      "Demo Team E": {
-        "played": 4,
+      "GSE": {
+        "played": 1,
         "won": 0,
         "drawn": 0,
-        "lost": 4,
-        "gf": 2,
-        "ga": 10,
-        "gd": -8,
+        "lost": 1,
+        "gf": 0,
+        "ga": 2,
+        "gd": -2,
         "points": 0
       }
     },
-    "C": {
-      "Sample Team 1": {
-        "played": 5,
-        "won": 4,
-        "drawn": 1,
-        "lost": 0,
-        "gf": 12,
-        "ga": 3,
-        "gd": 9,
-        "points": 13
-      },
-      "Sample Team 2": {
-        "played": 5,
-        "won": 3,
-        "drawn": 2,
-        "lost": 0,
-        "gf": 8,
-        "ga": 2,
-        "gd": 6,
-        "points": 11
-      },
-      "Sample Team 3": {
-        "played": 5,
-        "won": 3,
-        "drawn": 1,
-        "lost": 1,
-        "gf": 7,
-        "ga": 4,
-        "gd": 3,
-        "points": 10
-      },
-      "Sample Team 4": {
-        "played": 5,
+    "B": {
+      "SE7EN": {
+        "played": 2,
         "won": 2,
         "drawn": 0,
-        "lost": 3,
-        "gf": 5,
-        "ga": 7,
-        "gd": -2,
+        "lost": 0,
+        "gf": 7,
+        "ga": 1,
+        "gd": 6,
         "points": 6
       },
-      "Sample Team 5": {
-        "played": 5,
-        "won": 1,
-        "drawn": 0,
-        "lost": 4,
-        "gf": 3,
-        "ga": 9,
-        "gd": -6,
-        "points": 3
-      },
-      "Sample Team 6": {
-        "played": 5,
+      "Q": {
+        "played": 2,
         "won": 0,
         "drawn": 0,
-        "lost": 5,
+        "lost": 2,
+        "gf": 0,
+        "ga": 6,
+        "gd": -6,
+        "points": 0
+      },
+      "BMF": {
+        "played": 3,
+        "won": 0,
+        "drawn": 0,
+        "lost": 3,
         "gf": 1,
-        "ga": 11,
-        "gd": -10,
+        "ga": 9,
+        "gd": -8,
+        "points": 0
+      },
+      "pawo": {
+        "played": 3,
+        "won": 3,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 7,
+        "ga": 0,
+        "gd": 7,
+        "points": 9
+      },
+      "ციხე": {
+        "played": 2,
+        "won": 1,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 3,
+        "ga": 2,
+        "gd": 1,
+        "points": 3
+      }
+    },
+    "C": {
+      "დიდი გზა": {
+        "played": 1,
+        "won": 0,
+        "drawn": 1,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 1
+      },
+      "არა": {
+        "played": 2,
+        "won": 2,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 7,
+        "ga": 0,
+        "gd": 7,
+        "points": 6
+      },
+      "ბოლოსწინა სეზონი": {
+        "played": 1,
+        "won": 1,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 3,
+        "ga": 0,
+        "gd": 3,
+        "points": 3
+      },
+      "საძმოს წევრები": {
+        "played": 2,
+        "won": 1,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 3,
+        "ga": 6,
+        "gd": -3,
+        "points": 3
+      },
+      "Blonde Lovers": {
+        "played": 1,
+        "won": 0,
+        "drawn": 1,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 1
+      },
+      "პომპეი": {
+        "played": 3,
+        "won": 0,
+        "drawn": 0,
+        "lost": 3,
+        "gf": 2,
+        "ga": 9,
+        "gd": -7,
         "points": 0
       }
     },
     "D": {
-      "Example Team 1": {
-        "played": 5,
-        "won": 5,
-        "drawn": 0,
-        "lost": 0,
-        "gf": 15,
-        "ga": 2,
-        "gd": 13,
-        "points": 15
-      },
-      "Example Team 2": {
-        "played": 5,
-        "won": 3,
-        "drawn": 1,
-        "lost": 1,
-        "gf": 9,
-        "ga": 5,
-        "gd": 4,
-        "points": 10
-      },
-      "Example Team 3": {
-        "played": 5,
-        "won": 2,
-        "drawn": 2,
-        "lost": 1,
-        "gf": 7,
-        "ga": 6,
-        "gd": 1,
-        "points": 8
-      },
-      "Example Team 4": {
-        "played": 5,
-        "won": 2,
-        "drawn": 1,
-        "lost": 2,
-        "gf": 6,
-        "ga": 7,
-        "gd": -1,
-        "points": 7
-      },
-      "Example Team 5": {
-        "played": 5,
+      "თუ მაჩ": {
+        "played": 2,
         "won": 1,
-        "drawn": 0,
-        "lost": 4,
-        "gf": 4,
-        "ga": 10,
-        "gd": -6,
-        "points": 3
+        "drawn": 1,
+        "lost": 0,
+        "gf": 8,
+        "ga": 4,
+        "gd": 4,
+        "points": 4
       },
-      "Example Team 6": {
-        "played": 5,
+      "ბილბაო": {
+        "played": 2,
         "won": 0,
         "drawn": 0,
-        "lost": 5,
+        "lost": 2,
         "gf": 2,
-        "ga": 14,
-        "gd": -12,
+        "ga": 7,
+        "gd": -5,
         "points": 0
+      },
+      "წერო": {
+        "played": 2,
+        "won": 1,
+        "drawn": 1,
+        "lost": 0,
+        "gf": 6,
+        "ga": 3,
+        "gd": 3,
+        "points": 4
+      },
+      "კიდეკაია": {
+        "played": 2,
+        "won": 1,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 2,
+        "ga": 4,
+        "gd": -2,
+        "points": 3
+      },
+      "Nageci": {
+        "played": 1,
+        "won": 0,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 0,
+        "ga": 2,
+        "gd": -2,
+        "points": 0
+      },
+      "გოლანდი": {
+        "played": 1,
+        "won": 1,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 2,
+        "ga": 0,
+        "gd": 2,
+        "points": 3
       }
     }
   },
   "matches": [
     {
-      "group": "A",
-      "home": "Test Team 1",
-      "away": "Test Team 2",
-      "homeScore": 2,
-      "awayScore": 0,
-      "id": 1700000000001
-    },
-    {
-      "group": "A",
-      "home": "Test Team 3",
-      "away": "Test Team 4",
-      "homeScore": 1,
-      "awayScore": 0,
-      "id": 1700000000002
-    },
-    {
-      "group": "A",
-      "home": "Test Team 5",
-      "away": "Test Team 1",
-      "homeScore": 0,
-      "awayScore": 3,
-      "id": 1700000000003
-    },
-    {
       "group": "B",
-      "home": "Demo Team A",
-      "away": "Demo Team B",
-      "homeScore": 2,
+      "home": "SE7EN",
+      "away": "Q",
+      "homeScore": 4,
       "awayScore": 0,
-      "id": 1700000000004
-    },
-    {
-      "group": "B",
-      "home": "Demo Team C",
-      "away": "Demo Team D",
-      "homeScore": 1,
-      "awayScore": 1,
-      "id": 1700000000005
+      "id": 1762276813577
     },
     {
       "group": "C",
-      "home": "Sample Team 1",
-      "away": "Sample Team 2",
-      "homeScore": 2,
+      "home": "საძმოს წევრები",
+      "away": "პომპეი",
+      "homeScore": 3,
       "awayScore": 2,
-      "id": 1700000000006
-    },
-    {
-      "group": "C",
-      "home": "Sample Team 3",
-      "away": "Sample Team 4",
-      "homeScore": 2,
-      "awayScore": 1,
-      "id": 1700000000007
+      "id": 1762276847298
     },
     {
       "group": "D",
-      "home": "Example Team 1",
-      "away": "Example Team 2",
+      "home": "Nageci",
+      "away": "გოლანდი",
+      "homeScore": 0,
+      "awayScore": 2,
+      "id": 1762276869386
+    },
+    {
+      "group": "A",
+      "home": "ამბიდექსტერი",
+      "away": "FC Kiutletiko",
+      "homeScore": 0,
+      "awayScore": 2,
+      "id": 1762276882147
+    },
+    {
+      "group": "A",
+      "home": "ამბიდექსტერი",
+      "away": "Trinity",
+      "homeScore": 1,
+      "awayScore": 2,
+      "id": 1762427507079
+    },
+    {
+      "group": "A",
+      "home": "FC QSOVROSTVIS",
+      "away": "GSE",
+      "homeScore": 2,
+      "awayScore": 0,
+      "id": 1762427692336
+    },
+    {
+      "group": "B",
+      "home": "SE7EN",
+      "away": "BMF",
       "homeScore": 3,
       "awayScore": 1,
-      "id": 1700000000008
+      "id": 1762427757163
+    },
+    {
+      "group": "B",
+      "home": "pawo",
+      "away": "ციხე",
+      "homeScore": 2,
+      "awayScore": 0,
+      "id": 1762427852473
+    },
+    {
+      "group": "C",
+      "home": "არა",
+      "away": "პომპეი",
+      "homeScore": 3,
+      "awayScore": 0,
+      "id": 1762427985673
+    },
+    {
+      "group": "C",
+      "home": "დიდი გზა",
+      "away": "Blonde Lovers",
+      "homeScore": 0,
+      "awayScore": 0,
+      "id": 1762428167779
     },
     {
       "group": "D",
-      "home": "Example Team 3",
-      "away": "Example Team 4",
-      "homeScore": 1,
+      "home": "წერო",
+      "away": "კიდეკაია",
+      "homeScore": 3,
+      "awayScore": 0,
+      "id": 1762428199820
+    },
+    {
+      "group": "D",
+      "home": "თუ მაჩ",
+      "away": "ბილბაო",
+      "homeScore": 5,
       "awayScore": 1,
-      "id": 1700000000009
+      "id": 1762428292181
+    },
+    {
+      "group": "B",
+      "home": "pawo",
+      "away": "Q",
+      "homeScore": 2,
+      "awayScore": 0,
+      "id": 1762508224597
+    },
+    {
+      "group": "C",
+      "home": "ბოლოსწინა სეზონი",
+      "away": "პომპეი",
+      "homeScore": 3,
+      "awayScore": 0,
+      "id": 1762508286539
+    },
+    {
+      "group": "A",
+      "home": "FC QSOVROSTVIS",
+      "away": "ამბიდექსტერი",
+      "homeScore": 0,
+      "awayScore": 1,
+      "id": 1762509031276
+    },
+    {
+      "group": "A",
+      "home": "FC Kiutletiko",
+      "away": "Trinity",
+      "homeScore": 0,
+      "awayScore": 3,
+      "id": 1762509124139
+    },
+    {
+      "group": "C",
+      "home": "არა",
+      "away": "საძმოს წევრები",
+      "homeScore": 4,
+      "awayScore": 0,
+      "id": 1762509283482
+    },
+    {
+      "group": "B",
+      "home": "ციხე",
+      "away": "BMF",
+      "homeScore": 3,
+      "awayScore": 0,
+      "id": 1762509366006
+    },
+    {
+      "group": "D",
+      "home": "ბილბაო",
+      "away": "კიდეკაია",
+      "homeScore": 1,
+      "awayScore": 2,
+      "id": 1762509451595
+    },
+    {
+      "group": "D",
+      "home": "თუ მაჩ",
+      "away": "წერო",
+      "homeScore": 3,
+      "awayScore": 3,
+      "id": 1762509548241
+    },
+    {
+      "group": "B",
+      "home": "pawo",
+      "away": "BMF",
+      "homeScore": 3,
+      "awayScore": 0,
+      "id": 1762510451226
     }
   ],
   "scorers": [
     {
-      "player": "John Smith",
-      "team": "Test Team 1",
-      "goals": 2,
-      "matchId": "group_1700000000001",
-      "matchType": "group"
-    },
-    {
-      "player": "Mike Johnson",
-      "team": "Test Team 3",
+      "player": "გიორგი რეხვიაშვილი",
+      "team": "SE7EN",
       "goals": 1,
-      "matchId": "group_1700000000002",
+      "matchId": "group_1762276813577",
       "matchType": "group"
     },
     {
-      "player": "David Wilson",
-      "team": "Test Team 1",
-      "goals": 2,
-      "matchId": "group_1700000000003",
-      "matchType": "group"
-    },
-    {
-      "player": "Chris Brown",
-      "team": "Demo Team A",
+      "player": "დავით ქარსელიძე",
+      "team": "SE7EN",
       "goals": 1,
-      "matchId": "group_1700000000004",
+      "matchId": "group_1762276813577",
       "matchType": "group"
     },
     {
-      "player": "Alex Green",
-      "team": "Demo Team A",
+      "player": "შაკო თაზიაშვილი",
+      "team": "SE7EN",
       "goals": 1,
-      "matchId": "group_1700000000004",
+      "matchId": "group_1762276813577",
       "matchType": "group"
     },
     {
-      "player": "Sam Davis",
-      "team": "Demo Team C",
+      "player": "ჯემიკო ჯაბიძე",
+      "team": "SE7EN",
       "goals": 1,
-      "matchId": "group_1700000000005",
+      "matchId": "group_1762276813577",
       "matchType": "group"
     },
     {
-      "player": "Tom Miller",
-      "team": "Sample Team 1",
-      "goals": 2,
-      "matchId": "group_1700000000006",
+      "player": "ილია ფხაკაძე",
+      "team": "საძმოს წევრები",
+      "goals": 1,
+      "matchId": "group_1762276847298",
       "matchType": "group"
     },
     {
-      "player": "James Taylor",
-      "team": "Sample Team 3",
+      "player": "გუგა გაგლოშვილი",
+      "team": "საძმოს წევრები",
       "goals": 2,
-      "matchId": "group_1700000000007",
+      "matchId": "group_1762276847298",
       "matchType": "group"
     },
     {
-      "player": "Robert Clark",
-      "team": "Example Team 1",
+      "player": "გურამ გრიგალაშვილი",
+      "team": "პომპეი",
+      "goals": 1,
+      "matchId": "group_1762276847298",
+      "matchType": "group"
+    },
+    {
+      "player": "საბა გელბახიანი",
+      "team": "პომპეი",
+      "goals": 1,
+      "matchId": "group_1762276847298",
+      "matchType": "group"
+    },
+    {
+      "player": "დაჩი გორდიაშვილი",
+      "team": "გოლანდი",
+      "goals": 1,
+      "matchId": "group_1762276869386",
+      "matchType": "group"
+    },
+    {
+      "player": "ლუკა ვასაძე",
+      "team": "გოლანდი",
+      "goals": 1,
+      "matchId": "group_1762276869386",
+      "matchType": "group"
+    },
+    {
+      "player": "ალექსანდრე ჭეიშვილი",
+      "team": "FC Kiutletiko",
       "goals": 2,
-      "matchId": "group_1700000000008",
+      "matchId": "group_1762276882147",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკა კუტია",
+      "team": "ამბიდექსტერი",
+      "goals": 1,
+      "matchId": "group_1762427507079",
+      "matchType": "group"
+    },
+    {
+      "player": "თემურ ჟღენტი",
+      "team": "Trinity",
+      "goals": 1,
+      "matchId": "group_1762427507079",
+      "matchType": "group"
+    },
+    {
+      "player": "ტიტე ზვიადაძე",
+      "team": "Trinity",
+      "goals": 1,
+      "matchId": "group_1762427507079",
+      "matchType": "group"
+    },
+    {
+      "player": "ლუკა ბოჭორიშვილი",
+      "team": "FC QSOVROSTVIS",
+      "goals": 1,
+      "matchId": "group_1762427692336",
+      "matchType": "group"
+    },
+    {
+      "player": "გიორგი ფურცელაძე",
+      "team": "FC QSOVROSTVIS",
+      "goals": 1,
+      "matchId": "group_1762427692336",
+      "matchType": "group"
+    },
+    {
+      "player": "დავით ქარსელიძე",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762427757163",
+      "matchType": "group"
+    },
+    {
+      "player": "შაკო თაზიაშვილი",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762427757163",
+      "matchType": "group"
+    },
+    {
+      "player": "ჯემიკო ჯაბიძე",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "group_1762427757163",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკა გურგუჩიანი",
+      "team": "BMF",
+      "goals": 1,
+      "matchId": "group_1762427757163",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკოლოზ დონაძე",
+      "team": "pawo",
+      "goals": 2,
+      "matchId": "group_1762427852473",
+      "matchType": "group"
+    },
+    {
+      "player": "დავით მათიაშვილი",
+      "team": "არა",
+      "goals": 2,
+      "matchId": "group_1762427985673",
+      "matchType": "group"
+    },
+    {
+      "player": "ანდრია გვარამია",
+      "team": "არა",
+      "goals": 1,
+      "matchId": "group_1762427985673",
+      "matchType": "group"
+    },
+    {
+      "player": "აკაკი ღაჭავა",
+      "team": "წერო",
+      "goals": 2,
+      "matchId": "group_1762428199820",
+      "matchType": "group"
+    },
+    {
+      "player": "გიორგი უკლება",
+      "team": "წერო",
+      "goals": 1,
+      "matchId": "group_1762428199820",
+      "matchType": "group"
+    },
+    {
+      "player": "ლუკა ნარსია",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "group_1762428292181",
+      "matchType": "group"
+    },
+    {
+      "player": "მიხეილ დადიანი",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "group_1762428292181",
+      "matchType": "group"
+    },
+    {
+      "player": "იონა ჩანქსელიანი",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "group_1762428292181",
+      "matchType": "group"
+    },
+    {
+      "player": "დავით ტაბატაძე",
+      "team": "თუ მაჩ",
+      "goals": 2,
+      "matchId": "group_1762428292181",
+      "matchType": "group"
+    },
+    {
+      "player": "ვიტო გუგუშვილი",
+      "team": "ბილბაო",
+      "goals": 1,
+      "matchId": "group_1762428292181",
+      "matchType": "group"
+    },
+    {
+      "player": "თედო რიონიძე",
+      "team": "pawo",
+      "goals": 2,
+      "matchId": "group_1762508224597",
+      "matchType": "group"
+    },
+    {
+      "player": "ბაქარი კვატაია",
+      "team": "ბოლოსწინა სეზონი",
+      "goals": 1,
+      "matchId": "group_1762508286539",
+      "matchType": "group"
+    },
+    {
+      "player": "ლუკა ტურაშვილი",
+      "team": "ბოლოსწინა სეზონი",
+      "goals": 1,
+      "matchId": "group_1762508286539",
+      "matchType": "group"
+    },
+    {
+      "player": "თორნიკე გოგოლიშვილი",
+      "team": "ბოლოსწინა სეზონი",
+      "goals": 1,
+      "matchId": "group_1762508286539",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკა კუტია",
+      "team": "ამბიდექსტერი",
+      "goals": 1,
+      "matchId": "group_1762509031276",
+      "matchType": "group"
+    },
+    {
+      "player": "ტიტე ზვიადაძე",
+      "team": "Trinity",
+      "goals": 3,
+      "matchId": "group_1762509124139",
+      "matchType": "group"
+    },
+    {
+      "player": "დავით მათიაშვილი",
+      "team": "არა",
+      "goals": 3,
+      "matchId": "group_1762509283482",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკოლოზ კვინიკაძე",
+      "team": "არა",
+      "goals": 1,
+      "matchId": "group_1762509283482",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკა ვარდოსანიძე",
+      "team": "ციხე",
+      "goals": 2,
+      "matchId": "group_1762509366006",
+      "matchType": "group"
+    },
+    {
+      "player": "ვასო კახნიაშვილი",
+      "team": "ციხე",
+      "goals": 1,
+      "matchId": "group_1762509366006",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკა რუსიშვილი",
+      "team": "ბილბაო",
+      "goals": 1,
+      "matchId": "group_1762509451595",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკა დონაძე",
+      "team": "კიდეკაია",
+      "goals": 2,
+      "matchId": "group_1762509451595",
+      "matchType": "group"
+    },
+    {
+      "player": "მერაბი ბოჭოიძე",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "group_1762509548241",
+      "matchType": "group"
+    },
+    {
+      "player": "ლუკა ნარსია",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "group_1762509548241",
+      "matchType": "group"
+    },
+    {
+      "player": "მიხეილ დადიანი",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "group_1762509548241",
+      "matchType": "group"
+    },
+    {
+      "player": "აკაკი ღაჭავა",
+      "team": "წერო",
+      "goals": 2,
+      "matchId": "group_1762509548241",
+      "matchType": "group"
+    },
+    {
+      "player": "გიორგი უგულავა",
+      "team": "წერო",
+      "goals": 1,
+      "matchId": "group_1762509548241",
+      "matchType": "group"
+    },
+    {
+      "player": "ანდრია კეკენაძე",
+      "team": "pawo",
+      "goals": 1,
+      "matchId": "group_1762510451226",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკოლოზ დონაძე",
+      "team": "pawo",
+      "goals": 1,
+      "matchId": "group_1762510451226",
+      "matchType": "group"
+    },
+    {
+      "player": "საბა ჩიჩუა",
+      "team": "pawo",
+      "goals": 1,
+      "matchId": "group_1762510451226",
       "matchType": "group"
     }
   ],
   "playoffMatches": {
-    "round16": [
-      {
-        "id": 1,
-        "team1": "Test Team 2",
-        "team2": "Demo Team C",
-        "score1": 2,
-        "score2": 1,
-        "penaltyScore1": null,
-        "penaltyScore2": null,
-        "winner": "Test Team 2",
-        "completed": true
-      },
-      {
-        "id": 2,
-        "team1": "Demo Team B",
-        "team2": "Test Team 3",
-        "score1": 1,
-        "score2": 1,
-        "penaltyScore1": 4,
-        "penaltyScore2": 3,
-        "winner": "Demo Team B",
-        "completed": true
-      },
-      {
-        "id": 3,
-        "team1": "Sample Team 2",
-        "team2": "Example Team 4",
-        "score1": 3,
-        "score2": 0,
-        "penaltyScore1": null,
-        "penaltyScore2": null,
-        "winner": "Sample Team 2",
-        "completed": true
-      },
-      {
-        "id": 4,
-        "team1": "Example Team 2",
-        "team2": "Sample Team 3",
-        "score1": null,
-        "score2": null,
-        "penaltyScore1": null,
-        "penaltyScore2": null,
-        "winner": null,
-        "completed": false
-      }
-    ],
-    "quarter": [
-      {
-        "id": 5,
-        "team1": "Sample Team 1",
-        "team2": "Test Team 2",
-        "score1": null,
-        "score2": null,
-        "penaltyScore1": null,
-        "penaltyScore2": null,
-        "winner": null,
-        "completed": false
-      },
-      {
-        "id": 6,
-        "team1": "Example Team 1",
-        "team2": "Sample Team 2",
-        "score1": null,
-        "score2": null,
-        "penaltyScore1": null,
-        "penaltyScore2": null,
-        "winner": null,
-        "completed": false
-      },
-      {
-        "id": 7,
-        "team1": "Test Team 1",
-        "team2": "Demo Team B",
-        "score1": null,
-        "score2": null,
-        "penaltyScore1": null,
-        "penaltyScore2": null,
-        "winner": null,
-        "completed": false
-      },
-      {
-        "id": 8,
-        "team1": "Demo Team A",
-        "team2": null,
-        "score1": null,
-        "score2": null,
-        "penaltyScore1": null,
-        "penaltyScore2": null,
-        "winner": null,
-        "completed": false
-      }
-    ],
-    "semi": [
-      {
-        "id": 9,
-        "team1": null,
-        "team2": null,
-        "score1": null,
-        "score2": null,
-        "penaltyScore1": null,
-        "penaltyScore2": null,
-        "winner": null,
-        "completed": false
-      },
-      {
-        "id": 10,
-        "team1": null,
-        "team2": null,
-        "score1": null,
-        "score2": null,
-        "penaltyScore1": null,
-        "penaltyScore2": null,
-        "winner": null,
-        "completed": false
-      }
-    ],
-    "final": [
-      {
-        "id": 11,
-        "team1": null,
-        "team2": null,
-        "score1": null,
-        "score2": null,
-        "penaltyScore1": null,
-        "penaltyScore2": null,
-        "winner": null,
-        "completed": false
-      }
-    ]
+    "round16": [],
+    "quarter": [],
+    "semi": [],
+    "final": []
   },
-  "exportDate": "2024-01-15T12:00:00.000Z"
+  "exportDate": "2025-11-07T10:19:14.029Z"
 };
 
         let groups = tournamentData.groups;
@@ -881,7 +1193,6 @@
             const statusContainer = document.getElementById('groupStageStatus');
             const bracket = document.getElementById('bracketContainer');
             
-            // აქ შეგიძლიათ დაამატოთ ლოგიკა პლეი-ოფის სტატუსის შესამოწმებლად
             statusContainer.innerHTML = '';
             
             bracket.innerHTML = `
