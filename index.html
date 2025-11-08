@@ -324,1174 +324,279 @@
         </div>
     </div>
 
-    <script>
-        // Add cache busting - force reload if page was cached
-        if (window.performance && window.performance.navigation.type === 2) {
-            window.location.reload();
-        }
-
-        // მონაცემები JSON-დან
-        const tournamentData = {
-  "groups": {
-    "A": [
-      "FC Kiutletiko",
-      "FC QSOVROSTVIS",
-      "ამბიდექსტერი",
-      "Trinity",
-      "GSE"
-    ],
-    "B": [
-      "SE7EN",
-      "Q",
-      "BMF",
-      "pawo",
-      "ციხე"
-    ],
-    "C": [
-      "დიდი გზა",
-      "არა",
-      "ბოლოსწინა სეზონი",
-      "საძმოს წევრები",
-      "Blonde Lovers",
-      "პომპეი"
-    ],
-    "D": [
-      "თუ მაჩ",
-      "ბილბაო",
-      "წერო",
-      "კიდეკაია",
-      "Nageci",
-      "გოლანდი"
-    ]
-  },
-  "standings": {
-    "A": {
-      "FC Kiutletiko": {
-        "played": 3,
-        "won": 2,
-        "drawn": 0,
-        "lost": 1,
-        "gf": 4,
-        "ga": 3,
-        "gd": 1,
-        "points": 6
-      },
-      "FC QSOVROSTVIS": {
-        "played": 3,
-        "won": 2,
-        "drawn": 0,
-        "lost": 1,
-        "gf": 4,
-        "ga": 2,
-        "gd": 2,
-        "points": 6
-      },
-      "ამბიდექსტერი": {
-        "played": 3,
-        "won": 1,
-        "drawn": 0,
-        "lost": 2,
-        "gf": 2,
-        "ga": 4,
-        "gd": -2,
-        "points": 3
-      },
-      "Trinity": {
-        "played": 3,
-        "won": 2,
-        "drawn": 0,
-        "lost": 1,
-        "gf": 6,
-        "ga": 3,
-        "gd": 3,
-        "points": 6
-      },
-      "GSE": {
-        "played": 2,
-        "won": 0,
-        "drawn": 0,
-        "lost": 2,
-        "gf": 0,
-        "ga": 4,
-        "gd": -4,
-        "points": 0
-      }
-    },
-    "B": {
-      "SE7EN": {
-        "played": 3,
-        "won": 2,
-        "drawn": 0,
-        "lost": 1,
-        "gf": 7,
-        "ga": 2,
-        "gd": 5,
-        "points": 6
-      },
-      "Q": {
-        "played": 2,
-        "won": 0,
-        "drawn": 0,
-        "lost": 2,
-        "gf": 0,
-        "ga": 6,
-        "gd": -6,
-        "points": 0
-      },
-      "BMF": {
-        "played": 3,
-        "won": 0,
-        "drawn": 0,
-        "lost": 3,
-        "gf": 1,
-        "ga": 9,
-        "gd": -8,
-        "points": 0
-      },
-      "pawo": {
-        "played": 4,
-        "won": 4,
-        "drawn": 0,
-        "lost": 0,
-        "gf": 8,
-        "ga": 0,
-        "gd": 8,
-        "points": 12
-      },
-      "ციხე": {
-        "played": 2,
-        "won": 1,
-        "drawn": 0,
-        "lost": 1,
-        "gf": 3,
-        "ga": 2,
-        "gd": 1,
-        "points": 3
-      }
-    },
-    "C": {
-      "დიდი გზა": {
-        "played": 2,
-        "won": 1,
-        "drawn": 1,
-        "lost": 0,
-        "gf": 1,
-        "ga": 0,
-        "gd": 1,
-        "points": 4
-      },
-      "არა": {
-        "played": 3,
-        "won": 2,
-        "drawn": 0,
-        "lost": 1,
-        "gf": 7,
-        "ga": 1,
-        "gd": 6,
-        "points": 6
-      },
-      "ბოლოსწინა სეზონი": {
-        "played": 2,
-        "won": 1,
-        "drawn": 1,
-        "lost": 0,
-        "gf": 3,
-        "ga": 0,
-        "gd": 3,
-        "points": 4
-      },
-      "საძმოს წევრები": {
-        "played": 2,
-        "won": 1,
-        "drawn": 0,
-        "lost": 1,
-        "gf": 3,
-        "ga": 6,
-        "gd": -3,
-        "points": 3
-      },
-      "Blonde Lovers": {
-        "played": 2,
-        "won": 0,
-        "drawn": 2,
-        "lost": 0,
-        "gf": 0,
-        "ga": 0,
-        "gd": 0,
-        "points": 2
-      },
-      "პომპეი": {
-        "played": 3,
-        "won": 0,
-        "drawn": 0,
-        "lost": 3,
-        "gf": 2,
-        "ga": 9,
-        "gd": -7,
-        "points": 0
-      }
-    },
-    "D": {
-      "თუ მაჩ": {
-        "played": 2,
-        "won": 1,
-        "drawn": 1,
-        "lost": 0,
-        "gf": 8,
-        "ga": 4,
-        "gd": 4,
-        "points": 4
-      },
-      "ბილბაო": {
-        "played": 3,
-        "won": 0,
-        "drawn": 1,
-        "lost": 2,
-        "gf": 3,
-        "ga": 8,
-        "gd": -5,
-        "points": 1
-      },
-      "წერო": {
-        "played": 2,
-        "won": 1,
-        "drawn": 1,
-        "lost": 0,
-        "gf": 6,
-        "ga": 3,
-        "gd": 3,
-        "points": 4
-      },
-      "კიდეკაია": {
-        "played": 3,
-        "won": 1,
-        "drawn": 1,
-        "lost": 1,
-        "gf": 4,
-        "ga": 6,
-        "gd": -2,
-        "points": 4
-      },
-      "Nageci": {
-        "played": 2,
-        "won": 0,
-        "drawn": 1,
-        "lost": 1,
-        "gf": 2,
-        "ga": 4,
-        "gd": -2,
-        "points": 1
-      },
-      "გოლანდი": {
-        "played": 2,
-        "won": 1,
-        "drawn": 1,
-        "lost": 0,
-        "gf": 3,
-        "ga": 1,
-        "gd": 2,
-        "points": 4
-      }
+<script>
+    // Add cache busting - force reload if page was cached
+    if (window.performance && window.performance.navigation.type === 2) {
+        window.location.reload();
     }
-  },
-  "matches": [
-    {
-      "group": "B",
-      "home": "SE7EN",
-      "away": "Q",
-      "homeScore": 4,
-      "awayScore": 0,
-      "id": 1762276813577
-    },
-    {
-      "group": "C",
-      "home": "საძმოს წევრები",
-      "away": "პომპეი",
-      "homeScore": 3,
-      "awayScore": 2,
-      "id": 1762276847298
-    },
-    {
-      "group": "D",
-      "home": "Nageci",
-      "away": "გოლანდი",
-      "homeScore": 0,
-      "awayScore": 2,
-      "id": 1762276869386
-    },
-    {
-      "group": "A",
-      "home": "ამბიდექსტერი",
-      "away": "FC Kiutletiko",
-      "homeScore": 0,
-      "awayScore": 2,
-      "id": 1762276882147
-    },
-    {
-      "group": "A",
-      "home": "ამბიდექსტერი",
-      "away": "Trinity",
-      "homeScore": 1,
-      "awayScore": 2,
-      "id": 1762427507079
-    },
-    {
-      "group": "A",
-      "home": "FC QSOVROSTVIS",
-      "away": "GSE",
-      "homeScore": 2,
-      "awayScore": 0,
-      "id": 1762427692336
-    },
-    {
-      "group": "B",
-      "home": "SE7EN",
-      "away": "BMF",
-      "homeScore": 3,
-      "awayScore": 1,
-      "id": 1762427757163
-    },
-    {
-      "group": "B",
-      "home": "pawo",
-      "away": "ციხე",
-      "homeScore": 2,
-      "awayScore": 0,
-      "id": 1762427852473
-    },
-    {
-      "group": "C",
-      "home": "არა",
-      "away": "პომპეი",
-      "homeScore": 3,
-      "awayScore": 0,
-      "id": 1762427985673
-    },
-    {
-      "group": "C",
-      "home": "დიდი გზა",
-      "away": "Blonde Lovers",
-      "homeScore": 0,
-      "awayScore": 0,
-      "id": 1762428167779
-    },
-    {
-      "group": "D",
-      "home": "წერო",
-      "away": "კიდეკაია",
-      "homeScore": 3,
-      "awayScore": 0,
-      "id": 1762428199820
-    },
-    {
-      "group": "D",
-      "home": "თუ მაჩ",
-      "away": "ბილბაო",
-      "homeScore": 5,
-      "awayScore": 1,
-      "id": 1762428292181
-    },
-    {
-      "group": "B",
-      "home": "pawo",
-      "away": "Q",
-      "homeScore": 2,
-      "awayScore": 0,
-      "id": 1762508224597
-    },
-    {
-      "group": "C",
-      "home": "ბოლოსწინა სეზონი",
-      "away": "პომპეი",
-      "homeScore": 3,
-      "awayScore": 0,
-      "id": 1762508286539
-    },
-    {
-      "group": "A",
-      "home": "FC QSOVROSTVIS",
-      "away": "ამბიდექსტერი",
-      "homeScore": 0,
-      "awayScore": 1,
-      "id": 1762509031276
-    },
-    {
-      "group": "A",
-      "home": "FC Kiutletiko",
-      "away": "Trinity",
-      "homeScore": 0,
-      "awayScore": 3,
-      "id": 1762509124139
-    },
-    {
-      "group": "C",
-      "home": "არა",
-      "away": "საძმოს წევრები",
-      "homeScore": 4,
-      "awayScore": 0,
-      "id": 1762509283482
-    },
-    {
-      "group": "B",
-      "home": "ციხე",
-      "away": "BMF",
-      "homeScore": 3,
-      "awayScore": 0,
-      "id": 1762509366006
-    },
-    {
-      "group": "D",
-      "home": "ბილბაო",
-      "away": "კიდეკაია",
-      "homeScore": 1,
-      "awayScore": 2,
-      "id": 1762509451595
-    },
-    {
-      "group": "D",
-      "home": "თუ მაჩ",
-      "away": "წერო",
-      "homeScore": 3,
-      "awayScore": 3,
-      "id": 1762509548241
-    },
-    {
-      "group": "B",
-      "home": "pawo",
-      "away": "BMF",
-      "homeScore": 3,
-      "awayScore": 0,
-      "id": 1762510451226
-    },
-    {
-      "group": "B",
-      "home": "SE7EN",
-      "away": "pawo",
-      "homeScore": 0,
-      "awayScore": 1,
-      "id": 1762555367071
-    },
-    {
-      "group": "C",
-      "home": "ბოლოსწინა სეზონი",
-      "away": "Blonde Lovers",
-      "homeScore": 0,
-      "awayScore": 0,
-      "id": 1762555419604
-    },
-    {
-      "group": "D",
-      "home": "ბილბაო",
-      "away": "გოლანდი",
-      "homeScore": 1,
-      "awayScore": 1,
-      "id": 1762555696556
-    },
-    {
-      "group": "C",
-      "home": "არა",
-      "away": "დიდი გზა",
-      "homeScore": 0,
-      "awayScore": 1,
-      "id": 1762555786159
-    },
-    {
-      "group": "A",
-      "home": "FC Kiutletiko",
-      "away": "GSE",
-      "homeScore": 2,
-      "awayScore": 0,
-      "id": 1762555867546
-    },
-    {
-      "group": "A",
-      "home": "FC QSOVROSTVIS",
-      "away": "Trinity",
-      "homeScore": 2,
-      "awayScore": 1,
-      "id": 1762555952885
-    },
-    {
-      "group": "D",
-      "home": "კიდეკაია",
-      "away": "Nageci",
-      "homeScore": 2,
-      "awayScore": 2,
-      "id": 1762593946642
-    }
-  ],
-  "scorers": [
-    {
-      "player": "გიორგი რეხვიაშვილი",
-      "team": "SE7EN",
-      "goals": 1,
-      "matchId": "group_1762276813577",
-      "matchType": "group"
-    },
-    {
-      "player": "დავით ქარსელიძე",
-      "team": "SE7EN",
-      "goals": 1,
-      "matchId": "group_1762276813577",
-      "matchType": "group"
-    },
-    {
-      "player": "შაკო თაზიაშვილი",
-      "team": "SE7EN",
-      "goals": 1,
-      "matchId": "group_1762276813577",
-      "matchType": "group"
-    },
-    {
-      "player": "ჯემიკო ჯაბიძე",
-      "team": "SE7EN",
-      "goals": 1,
-      "matchId": "group_1762276813577",
-      "matchType": "group"
-    },
-    {
-      "player": "ილია ფხაკაძე",
-      "team": "საძმოს წევრები",
-      "goals": 1,
-      "matchId": "group_1762276847298",
-      "matchType": "group"
-    },
-    {
-      "player": "გუგა გაგლოშვილი",
-      "team": "საძმოს წევრები",
-      "goals": 2,
-      "matchId": "group_1762276847298",
-      "matchType": "group"
-    },
-    {
-      "player": "გურამ გრიგალაშვილი",
-      "team": "პომპეი",
-      "goals": 1,
-      "matchId": "group_1762276847298",
-      "matchType": "group"
-    },
-    {
-      "player": "საბა გელბახიანი",
-      "team": "პომპეი",
-      "goals": 1,
-      "matchId": "group_1762276847298",
-      "matchType": "group"
-    },
-    {
-      "player": "დაჩი გორდიაშვილი",
-      "team": "გოლანდი",
-      "goals": 1,
-      "matchId": "group_1762276869386",
-      "matchType": "group"
-    },
-    {
-      "player": "ლუკა ვასაძე",
-      "team": "გოლანდი",
-      "goals": 1,
-      "matchId": "group_1762276869386",
-      "matchType": "group"
-    },
-    {
-      "player": "ალექსანდრე ჭეიშვილი",
-      "team": "FC Kiutletiko",
-      "goals": 2,
-      "matchId": "group_1762276882147",
-      "matchType": "group"
-    },
-    {
-      "player": "ნიკა კუტია",
-      "team": "ამბიდექსტერი",
-      "goals": 1,
-      "matchId": "group_1762427507079",
-      "matchType": "group"
-    },
-    {
-      "player": "თემურ ჟღენტი",
-      "team": "Trinity",
-      "goals": 1,
-      "matchId": "group_1762427507079",
-      "matchType": "group"
-    },
-    {
-      "player": "ტიტე ზვიადაძე",
-      "team": "Trinity",
-      "goals": 1,
-      "matchId": "group_1762427507079",
-      "matchType": "group"
-    },
-    {
-      "player": "ლუკა ბოჭორიშვილი",
-      "team": "FC QSOVROSTVIS",
-      "goals": 1,
-      "matchId": "group_1762427692336",
-      "matchType": "group"
-    },
-    {
-      "player": "გიორგი ფურცელაძე",
-      "team": "FC QSOVROSTVIS",
-      "goals": 1,
-      "matchId": "group_1762427692336",
-      "matchType": "group"
-    },
-    {
-      "player": "დავით ქარსელიძე",
-      "team": "SE7EN",
-      "goals": 1,
-      "matchId": "group_1762427757163",
-      "matchType": "group"
-    },
-    {
-      "player": "შაკო თაზიაშვილი",
-      "team": "SE7EN",
-      "goals": 1,
-      "matchId": "group_1762427757163",
-      "matchType": "group"
-    },
-    {
-      "player": "ჯემიკო ჯაბიძე",
-      "team": "SE7EN",
-      "goals": 1,
-      "matchId": "group_1762427757163",
-      "matchType": "group"
-    },
-    {
-      "player": "ნიკა გურგუჩიანი",
-      "team": "BMF",
-      "goals": 1,
-      "matchId": "group_1762427757163",
-      "matchType": "group"
-    },
-    {
-      "player": "ნიკოლოზ დონაძე",
-      "team": "pawo",
-      "goals": 2,
-      "matchId": "group_1762427852473",
-      "matchType": "group"
-    },
-    {
-      "player": "დავით მათიაშვილი",
-      "team": "არა",
-      "goals": 2,
-      "matchId": "group_1762427985673",
-      "matchType": "group"
-    },
-    {
-      "player": "ანდრია გვარამია",
-      "team": "არა",
-      "goals": 1,
-      "matchId": "group_1762427985673",
-      "matchType": "group"
-    },
-    {
-      "player": "აკაკი ღაჭავა",
-      "team": "წერო",
-      "goals": 2,
-      "matchId": "group_1762428199820",
-      "matchType": "group"
-    },
-    {
-      "player": "გიორგი უკლება",
-      "team": "წერო",
-      "goals": 1,
-      "matchId": "group_1762428199820",
-      "matchType": "group"
-    },
-    {
-      "player": "ლუკა ნარსია",
-      "team": "თუ მაჩ",
-      "goals": 1,
-      "matchId": "group_1762428292181",
-      "matchType": "group"
-    },
-    {
-      "player": "მიხეილ დადიანი",
-      "team": "თუ მაჩ",
-      "goals": 1,
-      "matchId": "group_1762428292181",
-      "matchType": "group"
-    },
-    {
-      "player": "იონა ჩანქსელიანი",
-      "team": "თუ მაჩ",
-      "goals": 1,
-      "matchId": "group_1762428292181",
-      "matchType": "group"
-    },
-    {
-      "player": "დავით ტაბატაძე",
-      "team": "თუ მაჩ",
-      "goals": 2,
-      "matchId": "group_1762428292181",
-      "matchType": "group"
-    },
-    {
-      "player": "ვიტო გუგუშვილი",
-      "team": "ბილბაო",
-      "goals": 1,
-      "matchId": "group_1762428292181",
-      "matchType": "group"
-    },
-    {
-      "player": "თედო რიონიძე",
-      "team": "pawo",
-      "goals": 2,
-      "matchId": "group_1762508224597",
-      "matchType": "group"
-    },
-    {
-      "player": "ბაქარი კვატაია",
-      "team": "ბოლოსწინა სეზონი",
-      "goals": 1,
-      "matchId": "group_1762508286539",
-      "matchType": "group"
-    },
-    {
-      "player": "ლუკა ტურაშვილი",
-      "team": "ბოლოსწინა სეზონი",
-      "goals": 1,
-      "matchId": "group_1762508286539",
-      "matchType": "group"
-    },
-    {
-      "player": "თორნიკე გოგოლიშვილი",
-      "team": "ბოლოსწინა სეზონი",
-      "goals": 1,
-      "matchId": "group_1762508286539",
-      "matchType": "group"
-    },
-    {
-      "player": "ნიკა კუტია",
-      "team": "ამბიდექსტერი",
-      "goals": 1,
-      "matchId": "group_1762509031276",
-      "matchType": "group"
-    },
-    {
-      "player": "ტიტე ზვიადაძე",
-      "team": "Trinity",
-      "goals": 3,
-      "matchId": "group_1762509124139",
-      "matchType": "group"
-    },
-    {
-      "player": "დავით მათიაშვილი",
-      "team": "არა",
-      "goals": 3,
-      "matchId": "group_1762509283482",
-      "matchType": "group"
-    },
-    {
-      "player": "ნიკოლოზ კვინიკაძე",
-      "team": "არა",
-      "goals": 1,
-      "matchId": "group_1762509283482",
-      "matchType": "group"
-    },
-    {
-      "player": "ნიკა ვარდოსანიძე",
-      "team": "ციხე",
-      "goals": 2,
-      "matchId": "group_1762509366006",
-      "matchType": "group"
-    },
-    {
-      "player": "ვასო კახნიაშვილი",
-      "team": "ციხე",
-      "goals": 1,
-      "matchId": "group_1762509366006",
-      "matchType": "group"
-    },
-    {
-      "player": "ნიკა რუსიშვილი",
-      "team": "ბილბაო",
-      "goals": 1,
-      "matchId": "group_1762509451595",
-      "matchType": "group"
-    },
-    {
-      "player": "ნიკა დონაძე",
-      "team": "კიდეკაია",
-      "goals": 2,
-      "matchId": "group_1762509451595",
-      "matchType": "group"
-    },
-    {
-      "player": "მერაბი ბოჭოიძე",
-      "team": "თუ მაჩ",
-      "goals": 1,
-      "matchId": "group_1762509548241",
-      "matchType": "group"
-    },
-    {
-      "player": "ლუკა ნარსია",
-      "team": "თუ მაჩ",
-      "goals": 1,
-      "matchId": "group_1762509548241",
-      "matchType": "group"
-    },
-    {
-      "player": "მიხეილ დადიანი",
-      "team": "თუ მაჩ",
-      "goals": 1,
-      "matchId": "group_1762509548241",
-      "matchType": "group"
-    },
-    {
-      "player": "აკაკი ღაჭავა",
-      "team": "წერო",
-      "goals": 2,
-      "matchId": "group_1762509548241",
-      "matchType": "group"
-    },
-    {
-      "player": "გიორგი უგულავა",
-      "team": "წერო",
-      "goals": 1,
-      "matchId": "group_1762509548241",
-      "matchType": "group"
-    },
-    {
-      "player": "ანდრია კეკენაძე",
-      "team": "pawo",
-      "goals": 1,
-      "matchId": "group_1762510451226",
-      "matchType": "group"
-    },
-    {
-      "player": "ნიკოლოზ დონაძე",
-      "team": "pawo",
-      "goals": 1,
-      "matchId": "group_1762510451226",
-      "matchType": "group"
-    },
-    {
-      "player": "საბა ჩიჩუა",
-      "team": "pawo",
-      "goals": 1,
-      "matchId": "group_1762510451226",
-      "matchType": "group"
-    },
-    {
-      "player": "ანდრია კეკენაძე",
-      "team": "pawo",
-      "goals": 1,
-      "matchId": "group_1762555367071",
-      "matchType": "group"
-    },
-    {
-      "player": "დაჩი ჩადუნელი",
-      "team": "ბილბაო",
-      "goals": 1,
-      "matchId": "group_1762555696556",
-      "matchType": "group"
-    },
-    {
-      "player": "საბა ჭიჭინაძე",
-      "team": "დიდი გზა",
-      "goals": 1,
-      "matchId": "group_1762555786159",
-      "matchType": "group"
-    },
-    {
-      "player": "დავით ბოჭორიშვილი",
-      "team": "FC Kiutletiko",
-      "goals": 1,
-      "matchId": "group_1762555867546",
-      "matchType": "group"
-    },
-    {
-      "player": "ალექსანდრე ჭეიშვილი",
-      "team": "FC Kiutletiko",
-      "goals": 1,
-      "matchId": "group_1762555867546",
-      "matchType": "group"
-    },
-    {
-      "player": "ლევანი კოვზირიძე",
-      "team": "FC QSOVROSTVIS",
-      "goals": 1,
-      "matchId": "group_1762555952885",
-      "matchType": "group"
-    },
-    {
-      "player": "ლუკა ბოჭორიშვილი",
-      "team": "FC QSOVROSTVIS",
-      "goals": 1,
-      "matchId": "group_1762555952885",
-      "matchType": "group"
-    },
-    {
-      "player": "ტიტე ზვიადაძე",
-      "team": "Trinity",
-      "goals": 1,
-      "matchId": "group_1762555952885",
-      "matchType": "group"
-    },
-    {
-      "player": "ლაშა ვერულაშვილი",
-      "team": "კიდეკაია",
-      "goals": 1,
-      "matchId": "group_1762593946642",
-      "matchType": "group"
-    },
-    {
-      "player": "ნიკა დონაძე",
-      "team": "კიდეკაია",
-      "goals": 1,
-      "matchId": "group_1762593946642",
-      "matchType": "group"
-    },
-    {
-      "player": "დათო დავითაია",
-      "team": "Nageci",
-      "goals": 1,
-      "matchId": "group_1762593946642",
-      "matchType": "group"
-    },
-    {
-      "player": "მატეო",
-      "team": "Nageci",
-      "goals": 1,
-      "matchId": "group_1762593946642",
-      "matchType": "group"
-    }
-  ],
-  "playoffMatches": {
-    "round16": [],
-    "quarter": [],
-    "semi": [],
-    "final": []
-  },
-  "exportDate": "2025-11-08T09:27:42.696Z"
-};
 
-        let groups = tournamentData.groups;
-        let standings = tournamentData.standings;
-        let scorers = tournamentData.scorers;
-        let playoffMatches = tournamentData.playoffMatches;
+    // Global variables
+    let groups, standings, scorers, playoffMatches;
 
-        function updateGroupDisplay() {
-            ['A', 'B', 'C', 'D'].forEach(group => {
-                const container = document.getElementById(`group${group}`);
-                container.innerHTML = '';
-                groups[group].forEach(team => {
-                    const div = document.createElement('div');
-                    div.className = 'group-team';
-                    div.innerHTML = `<span>${team}</span>`;
-                    container.appendChild(div);
-                });
-            });
-        }
-
-        function updateStandings() {
-            ['A', 'B', 'C', 'D'].forEach(group => {
-                const container = document.getElementById(`standings${group}`);
-                const sorted = Object.entries(standings[group])
-                    .sort(([,a], [,b]) => b.points - a.points || b.gd - a.gd || b.gf - a.gf);
-
-                container.innerHTML = `
-                    <div class="group-header">ჯგუფი ${group}</div>
-                    <div class="standings-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>გუნდი</th>
-                                    <th>თ</th>
-                                    <th>მ</th>
-                                    <th>ფ</th>
-                                    <th>წ</th>
-                                    <th>გატ</th>
-                                    <th>გაშ</th>
-                                    <th>სხვ</th>
-                                    <th>ქულა</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                ${sorted.map(([team, stats], index) => `
-                                    <tr class="${index < 3 ? 'qualified' : ''}">
-                                        <td class="position">${index + 1}</td>
-                                        <td><strong>${team}</strong></td>
-                                        <td>${stats.played || 0}</td>
-                                        <td>${stats.won || 0}</td>
-                                        <td>${stats.drawn || 0}</td>
-                                        <td>${stats.lost || 0}</td>
-                                        <td>${stats.gf || 0}</td>
-                                        <td>${stats.ga || 0}</td>
-                                        <td>${stats.gd > 0 ? '+' : ''}${stats.gd || 0}</td>
-                                        <td><strong>${stats.points || 0}</strong></td>
-                                    </tr>
-                                `).join('')}
-                            </tbody>
-                        </table>
-                    </div>
-                `;
-            });
-        }
-
-        function updatePlayoff() {
-            const statusContainer = document.getElementById('groupStageStatus');
-            const bracket = document.getElementById('bracketContainer');
+    async function loadTournamentData() {
+        try {
+            // Using your actual GitHub raw URL
+            const response = await fetch('https://raw.githubusercontent.com/RatiMghvdeladze/football-tournament-2025/main/tournament-data.json');
             
-            statusContainer.innerHTML = '';
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
             
-            bracket.innerHTML = `
-                <div class="bracket-round">
-                    <h3 style="text-align: center; color: #667eea;">მერვედფინალი</h3>
-                    ${playoffMatches.round16.map(match => `
-                        <div class="bracket-match">
-                            <div class="bracket-team ${match.winner === match.team1 ? 'qualified' : ''}">
-                                ${match.team1} 
-                                ${match.score1 !== null ? 
-                                    (match.penaltyScore1 !== null ? 
-                                        `${match.score1}(${match.penaltyScore1})` : 
-                                        match.score1) : 
-                                    ''}
-                            </div>
-                            <div class="bracket-team ${match.winner === match.team2 ? 'qualified' : ''}">
-                                ${match.team2} 
-                                ${match.score2 !== null ? 
-                                    (match.penaltyScore2 !== null ? 
-                                        `${match.score2}(${match.penaltyScore2})` : 
-                                        match.score2) : 
-                                    ''}
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-                <div class="bracket-round">
-                    <h3 style="text-align: center; color: #667eea;">მეოთხედფინალი</h3>
-                    ${playoffMatches.quarter.map(match => `
-                        <div class="bracket-match">
-                            <div class="bracket-team ${match.winner === match.team1 ? 'qualified' : ''}">
-                                ${match.team1 || 'TBD'} 
-                                ${match.score1 !== null ? 
-                                    (match.penaltyScore1 !== null ? 
-                                        `${match.score1}(${match.penaltyScore1})` : 
-                                        match.score1) : 
-                                    ''}
-                            </div>
-                            <div class="bracket-team ${match.winner === match.team2 ? 'qualified' : ''}">
-                                ${match.team2 || 'TBD'} 
-                                ${match.score2 !== null ? 
-                                    (match.penaltyScore2 !== null ? 
-                                        `${match.score2}(${match.penaltyScore2})` : 
-                                        match.score2) : 
-                                    ''}
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-                <div class="bracket-round">
-                    <h3 style="text-align: center; color: #667eea;">ნახევარფინალი</h3>
-                    ${playoffMatches.semi.map(match => `
-                        <div class="bracket-match">
-                            <div class="bracket-team ${match.winner === match.team1 ? 'qualified' : ''}">
-                                ${match.team1 || 'TBD'} 
-                                ${match.score1 !== null ? 
-                                    (match.penaltyScore1 !== null ? 
-                                        `${match.score1}(${match.penaltyScore1})` : 
-                                        match.score1) : 
-                                    ''}
-                            </div>
-                            <div class="bracket-team ${match.winner === match.team2 ? 'qualified' : ''}">
-                                ${match.team2 || 'TBD'} 
-                                ${match.score2 !== null ? 
-                                    (match.penaltyScore2 !== null ? 
-                                        `${match.score2}(${match.penaltyScore2})` : 
-                                        match.score2) : 
-                                    ''}
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-                <div class="bracket-round">
-                    <h3 style="text-align: center; color: #667eea;">ფინალი</h3>
-                    ${playoffMatches.final.map(match => `
-                        <div class="bracket-match">
-                            <div class="bracket-team ${match.winner === match.team1 ? 'qualified' : ''}">
-                                ${match.team1 || 'TBD'} 
-                                ${match.score1 !== null ? 
-                                    (match.penaltyScore1 !== null ? 
-                                        `${match.score1}(${match.penaltyScore1})` : 
-                                        match.score1) : 
-                                    ''}
-                            </div>
-                            <div class="bracket-team ${match.winner === match.team2 ? 'qualified' : ''}">
-                                ${match.team2 || 'TBD'} 
-                                ${match.score2 !== null ? 
-                                    (match.penaltyScore2 !== null ? 
-                                        `${match.score2}(${match.penaltyScore2})` : 
-                                        match.score2) : 
-                                    ''}
-                            </div>
-                        </div>
-                    `).join('')}
+            const tournamentData = await response.json();
+            initializeApp(tournamentData);
+        } catch (error) {
+            console.error('Error loading tournament data:', error);
+            // Show a user-friendly error message
+            document.body.innerHTML = `
+                <div style="color: white; text-align: center; padding: 50px;">
+                    <h2>Error loading tournament data</h2>
+                    <p>Please check your internet connection and try again.</p>
+                    <button onclick="location.reload()" style="padding: 10px 20px; margin-top: 20px; background: white; border: none; border-radius: 5px; cursor: pointer;">Retry</button>
                 </div>
             `;
         }
+    }
 
-        function updateTopScorers() {
-            const container = document.getElementById('topScorersTable');
+    function initializeApp(tournamentData) {
+        groups = tournamentData.groups;
+        standings = tournamentData.standings;
+        scorers = tournamentData.scorers;
+        playoffMatches = tournamentData.playoffMatches;
+
+        // Your existing functions
+        updateGroupDisplay();
+        updateStandings();
+        updatePlayoff();
+        updateTopScorers();
+    }
+
+    // Your existing functions remain exactly the same
+    function updateGroupDisplay() {
+        ['A', 'B', 'C', 'D'].forEach(group => {
+            const container = document.getElementById(`group${group}`);
+            if (!container) return;
             
-            const playerGoals = {};
-            
-            scorers.forEach(scorer => {
-                if (!playerGoals[scorer.player]) {
-                    playerGoals[scorer.player] = {
-                        player: scorer.player,
-                        team: scorer.team,
-                        goals: 0
-                    };
-                }
-                playerGoals[scorer.player].goals += scorer.goals;
+            container.innerHTML = '';
+            groups[group].forEach(team => {
+                const div = document.createElement('div');
+                div.className = 'group-team';
+                div.innerHTML = `<span>${team}</span>`;
+                container.appendChild(div);
             });
+        });
+    }
+
+    function updateStandings() {
+        ['A', 'B', 'C', 'D'].forEach(group => {
+            const container = document.getElementById(`standings${group}`);
+            if (!container || !standings[group]) return;
             
-            const sortedScorers = Object.values(playerGoals).sort((a, b) => b.goals - a.goals);
-            
-            if (sortedScorers.length === 0) {
-                container.innerHTML = '<p>ჯერ არ არის შეყვანილი გოლები.</p>';
-                return;
-            }
-            
+            const sorted = Object.entries(standings[group])
+                .sort(([,a], [,b]) => b.points - a.points || b.gd - a.gd || b.gf - a.gf);
+
             container.innerHTML = `
+                <div class="group-header">ჯგუფი ${group}</div>
                 <div class="standings-table">
                     <table>
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>მოთამაშე</th>
                                 <th>გუნდი</th>
-                                <th>გოლები</th>
+                                <th>თ</th>
+                                <th>მ</th>
+                                <th>ფ</th>
+                                <th>წ</th>
+                                <th>გატ</th>
+                                <th>გაშ</th>
+                                <th>სხვ</th>
+                                <th>ქულა</th>
                             </tr>
                         </thead>
                         <tbody>
-                            ${sortedScorers.map((scorer, index) => `
-                                <tr>
+                            ${sorted.map(([team, stats], index) => `
+                                <tr class="${index < 3 ? 'qualified' : ''}">
                                     <td class="position">${index + 1}</td>
-                                    <td><strong>${scorer.player}</strong></td>
-                                    <td>${scorer.team}</td>
-                                    <td><strong>${scorer.goals}</strong></td>
+                                    <td><strong>${team}</strong></td>
+                                    <td>${stats.played || 0}</td>
+                                    <td>${stats.won || 0}</td>
+                                    <td>${stats.drawn || 0}</td>
+                                    <td>${stats.lost || 0}</td>
+                                    <td>${stats.gf || 0}</td>
+                                    <td>${stats.ga || 0}</td>
+                                    <td>${stats.gd > 0 ? '+' : ''}${stats.gd || 0}</td>
+                                    <td><strong>${stats.points || 0}</strong></td>
                                 </tr>
                             `).join('')}
                         </tbody>
                     </table>
                 </div>
             `;
-        }
+        });
+    }
 
-        function showTab(tabName) {
-            document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
-            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
-        }
+    function updatePlayoff() {
+        const statusContainer = document.getElementById('groupStageStatus');
+        const bracket = document.getElementById('bracketContainer');
+        
+        if (!statusContainer || !bracket) return;
+        
+        statusContainer.innerHTML = '';
+        
+        bracket.innerHTML = `
+            <div class="bracket-round">
+                <h3 style="text-align: center; color: #667eea;">მერვედფინალი</h3>
+                ${playoffMatches.round16.map(match => `
+                    <div class="bracket-match">
+                        <div class="bracket-team ${match.winner === match.team1 ? 'qualified' : ''}">
+                            ${match.team1} 
+                            ${match.score1 !== null ? 
+                                (match.penaltyScore1 !== null ? 
+                                    `${match.score1}(${match.penaltyScore1})` : 
+                                    match.score1) : 
+                                ''}
+                        </div>
+                        <div class="bracket-team ${match.winner === match.team2 ? 'qualified' : ''}">
+                            ${match.team2} 
+                            ${match.score2 !== null ? 
+                                (match.penaltyScore2 !== null ? 
+                                    `${match.score2}(${match.penaltyScore2})` : 
+                                    match.score2) : 
+                                ''}
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+            <div class="bracket-round">
+                <h3 style="text-align: center; color: #667eea;">მეოთხედფინალი</h3>
+                ${playoffMatches.quarter.map(match => `
+                    <div class="bracket-match">
+                        <div class="bracket-team ${match.winner === match.team1 ? 'qualified' : ''}">
+                            ${match.team1 || 'TBD'} 
+                            ${match.score1 !== null ? 
+                                (match.penaltyScore1 !== null ? 
+                                    `${match.score1}(${match.penaltyScore1})` : 
+                                    match.score1) : 
+                                ''}
+                        </div>
+                        <div class="bracket-team ${match.winner === match.team2 ? 'qualified' : ''}">
+                            ${match.team2 || 'TBD'} 
+                            ${match.score2 !== null ? 
+                                (match.penaltyScore2 !== null ? 
+                                    `${match.score2}(${match.penaltyScore2})` : 
+                                    match.score2) : 
+                                ''}
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+            <div class="bracket-round">
+                <h3 style="text-align: center; color: #667eea;">ნახევარფინალი</h3>
+                ${playoffMatches.semi.map(match => `
+                    <div class="bracket-match">
+                        <div class="bracket-team ${match.winner === match.team1 ? 'qualified' : ''}">
+                            ${match.team1 || 'TBD'} 
+                            ${match.score1 !== null ? 
+                                (match.penaltyScore1 !== null ? 
+                                    `${match.score1}(${match.penaltyScore1})` : 
+                                    match.score1) : 
+                                ''}
+                        </div>
+                        <div class="bracket-team ${match.winner === match.team2 ? 'qualified' : ''}">
+                            ${match.team2 || 'TBD'} 
+                            ${match.score2 !== null ? 
+                                (match.penaltyScore2 !== null ? 
+                                    `${match.score2}(${match.penaltyScore2})` : 
+                                    match.score2) : 
+                                ''}
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+            <div class="bracket-round">
+                <h3 style="text-align: center; color: #667eea;">ფინალი</h3>
+                ${playoffMatches.final.map(match => `
+                    <div class="bracket-match">
+                        <div class="bracket-team ${match.winner === match.team1 ? 'qualified' : ''}">
+                            ${match.team1 || 'TBD'} 
+                            ${match.score1 !== null ? 
+                                (match.penaltyScore1 !== null ? 
+                                    `${match.score1}(${match.penaltyScore1})` : 
+                                    match.score1) : 
+                                ''}
+                        </div>
+                        <div class="bracket-team ${match.winner === match.team2 ? 'qualified' : ''}">
+                            ${match.team2 || 'TBD'} 
+                            ${match.score2 !== null ? 
+                                (match.penaltyScore2 !== null ? 
+                                    `${match.score2}(${match.penaltyScore2})` : 
+                                    match.score2) : 
+                                ''}
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
 
-        // ინიციალიზაცია
-        updateGroupDisplay();
-        updateStandings();
-        updatePlayoff();
-        updateTopScorers();
-    </script>
+    function updateTopScorers() {
+        const container = document.getElementById('topScorersTable');
+        if (!container) return;
+        
+        const playerGoals = {};
+        
+        scorers.forEach(scorer => {
+            if (!playerGoals[scorer.player]) {
+                playerGoals[scorer.player] = {
+                    player: scorer.player,
+                    team: scorer.team,
+                    goals: 0
+                };
+            }
+            playerGoals[scorer.player].goals += scorer.goals;
+        });
+        
+        const sortedScorers = Object.values(playerGoals).sort((a, b) => b.goals - a.goals);
+        
+        if (sortedScorers.length === 0) {
+            container.innerHTML = '<p>ჯერ არ არის შეყვანილი გოლები.</p>';
+            return;
+        }
+        
+        container.innerHTML = `
+            <div class="standings-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>მოთამაშე</th>
+                            <th>გუნდი</th>
+                            <th>გოლები</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${sortedScorers.map((scorer, index) => `
+                            <tr>
+                                <td class="position">${index + 1}</td>
+                                <td><strong>${scorer.player}</strong></td>
+                                <td>${scorer.team}</td>
+                                <td><strong>${scorer.goals}</strong></td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            </div>
+        `;
+    }
+
+    function showTab(tabName) {
+        document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.getElementById(tabName).classList.add('active');
+        event.target.classList.add('active');
+    }
+
+    // Initialize by loading data
+    loadTournamentData();
+</script>
 </body>
 </html>
