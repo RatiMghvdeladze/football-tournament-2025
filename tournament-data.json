@@ -56,13 +56,13 @@
         "points": 6
       },
       "ამბიდექსტერი": {
-        "played": 3,
+        "played": 4,
         "won": 1,
         "drawn": 0,
-        "lost": 2,
-        "gf": 2,
-        "ga": 4,
-        "gd": -2,
+        "lost": 3,
+        "gf": 3,
+        "ga": 6,
+        "gd": -3,
         "points": 3
       },
       "Trinity": {
@@ -76,24 +76,24 @@
         "points": 6
       },
       "GSE": {
-        "played": 2,
+        "played": 3,
         "won": 0,
         "drawn": 0,
-        "lost": 2,
-        "gf": 0,
-        "ga": 4,
-        "gd": -4,
+        "lost": 3,
+        "gf": 2,
+        "ga": 8,
+        "gd": -6,
         "points": 0
       },
       "პირველი მერცხალი": {
-        "played": 0,
-        "won": 0,
+        "played": 2,
+        "won": 2,
         "drawn": 0,
         "lost": 0,
-        "gf": 0,
-        "ga": 0,
-        "gd": 0,
-        "points": 0
+        "gf": 6,
+        "ga": 3,
+        "gd": 3,
+        "points": 6
       }
     },
     "B": {
@@ -108,23 +108,23 @@
         "points": 6
       },
       "Q": {
-        "played": 2,
-        "won": 0,
+        "played": 3,
+        "won": 1,
         "drawn": 0,
         "lost": 2,
-        "gf": 0,
+        "gf": 1,
         "ga": 6,
-        "gd": -6,
-        "points": 0
+        "gd": -5,
+        "points": 3
       },
       "BMF": {
-        "played": 3,
+        "played": 4,
         "won": 0,
         "drawn": 0,
-        "lost": 3,
+        "lost": 4,
         "gf": 1,
-        "ga": 9,
-        "gd": -8,
+        "ga": 10,
+        "gd": -9,
         "points": 0
       },
       "pawo": {
@@ -200,36 +200,36 @@
         "points": 3
       },
       "Blonde Lovers": {
-        "played": 2,
+        "played": 3,
         "won": 0,
         "drawn": 2,
-        "lost": 0,
+        "lost": 1,
         "gf": 0,
-        "ga": 0,
-        "gd": 0,
+        "ga": 2,
+        "gd": -2,
         "points": 2
       },
       "პომპეი": {
-        "played": 3,
-        "won": 0,
+        "played": 4,
+        "won": 1,
         "drawn": 0,
         "lost": 3,
-        "gf": 2,
+        "gf": 4,
         "ga": 9,
-        "gd": -7,
-        "points": 0
+        "gd": -5,
+        "points": 3
       }
     },
     "D": {
       "თუ მაჩ": {
-        "played": 2,
-        "won": 1,
+        "played": 3,
+        "won": 2,
         "drawn": 1,
         "lost": 0,
-        "gf": 8,
+        "gf": 9,
         "ga": 4,
-        "gd": 4,
-        "points": 4
+        "gd": 5,
+        "points": 7
       },
       "ბილბაო": {
         "played": 3,
@@ -242,14 +242,14 @@
         "points": 1
       },
       "წერო": {
-        "played": 2,
-        "won": 1,
+        "played": 3,
+        "won": 2,
         "drawn": 1,
         "lost": 0,
-        "gf": 6,
-        "ga": 3,
-        "gd": 3,
-        "points": 4
+        "gf": 11,
+        "ga": 6,
+        "gd": 5,
+        "points": 7
       },
       "კიდეკაია": {
         "played": 3,
@@ -262,23 +262,23 @@
         "points": 4
       },
       "Nageci": {
-        "played": 2,
+        "played": 3,
         "won": 0,
         "drawn": 1,
-        "lost": 1,
+        "lost": 2,
         "gf": 2,
-        "ga": 4,
-        "gd": -2,
+        "ga": 5,
+        "gd": -3,
         "points": 1
       },
       "გოლანდი": {
-        "played": 2,
+        "played": 3,
         "won": 1,
         "drawn": 1,
-        "lost": 0,
-        "gf": 3,
-        "ga": 1,
-        "gd": 2,
+        "lost": 1,
+        "gf": 6,
+        "ga": 6,
+        "gd": 0,
         "points": 4
       }
     }
@@ -507,6 +507,54 @@
       "homeScore": 2,
       "awayScore": 2,
       "id": 1762593946642
+    },
+    {
+      "group": "B",
+      "home": "Q",
+      "away": "BMF",
+      "homeScore": 1,
+      "awayScore": 0,
+      "id": 1764103167260
+    },
+    {
+      "group": "D",
+      "home": "წერო",
+      "away": "გოლანდი",
+      "homeScore": 5,
+      "awayScore": 3,
+      "id": 1764103217174
+    },
+    {
+      "group": "D",
+      "home": "თუ მაჩ",
+      "away": "Nageci",
+      "homeScore": 1,
+      "awayScore": 0,
+      "id": 1764103674072
+    },
+    {
+      "group": "A",
+      "home": "პირველი მერცხალი",
+      "away": "GSE",
+      "homeScore": 4,
+      "awayScore": 2,
+      "id": 1764103735864
+    },
+    {
+      "group": "C",
+      "home": "Blonde Lovers",
+      "away": "პომპეი",
+      "homeScore": 0,
+      "awayScore": 2,
+      "id": 1764104039600
+    },
+    {
+      "group": "A",
+      "home": "პირველი მერცხალი",
+      "away": "ამბიდექსტერი",
+      "homeScore": 2,
+      "awayScore": 1,
+      "id": 1764104207901
     }
   ],
   "scorers": [
@@ -943,6 +991,111 @@
       "goals": 1,
       "matchId": "group_1762593946642",
       "matchType": "group"
+    },
+    {
+      "player": "ლუკა კიკვაძე",
+      "team": "Q",
+      "goals": 1,
+      "matchId": "group_1764103167260",
+      "matchType": "group"
+    },
+    {
+      "player": "აკაკი ღაჭავა",
+      "team": "წერო",
+      "goals": 2,
+      "matchId": "group_1764103217174",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკოლოზ მაცაბერიძე",
+      "team": "წერო",
+      "goals": 2,
+      "matchId": "group_1764103217174",
+      "matchType": "group"
+    },
+    {
+      "player": "მიშო მღვდლიაშვილი",
+      "team": "გოლანდი",
+      "goals": 1,
+      "matchId": "group_1764103217174",
+      "matchType": "group"
+    },
+    {
+      "player": "ბაქარ ბანძელაძე",
+      "team": "გოლანდი",
+      "goals": 2,
+      "matchId": "group_1764103217174",
+      "matchType": "group"
+    },
+    {
+      "player": "მიხეილ დადიანი",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "group_1764103674072",
+      "matchType": "group"
+    },
+    {
+      "player": "საბა ფოჩხუა",
+      "team": "პომპეი",
+      "goals": 1,
+      "matchId": "group_1764104039600",
+      "matchType": "group"
+    },
+    {
+      "player": "ზაზა კარსანიძე",
+      "team": "პომპეი",
+      "goals": 1,
+      "matchId": "group_1764104039600",
+      "matchType": "group"
+    },
+    {
+      "player": "ნიკა გაგუა",
+      "team": "პირველი მერცხალი",
+      "goals": 1,
+      "matchId": "group_1764104207901",
+      "matchType": "group"
+    },
+    {
+      "player": "ირაკლი ჯაფარიძე",
+      "team": "პირველი მერცხალი",
+      "goals": 1,
+      "matchId": "group_1764104207901",
+      "matchType": "group"
+    },
+    {
+      "player": "ალექსანდრე ჯელია",
+      "team": "ამბიდექსტერი",
+      "goals": 1,
+      "matchId": "group_1764104207901",
+      "matchType": "group"
+    },
+    {
+      "player": "ირაკლი ჯაფარიძე",
+      "team": "პირველი მერცხალი",
+      "goals": 3,
+      "matchId": "group_1764103735864",
+      "matchType": "group"
+    },
+    {
+      "player": "ლუკა სამხარაძე",
+      "team": "პირველი მერცხალი",
+      "goals": 1,
+      "matchId": "group_1764103735864",
+      "matchType": "group"
+    },
+    {
+      "player": "ამიკო ლომსიანიძე",
+      "team": "GSE",
+      "goals": 1,
+      "matchId": "group_1764103735864",
+      "matchType": "group"
+    },
+    {
+      "player": "დათო სურმავა",
+      "team": "GSE",
+      "goals": 1,
+      "matchId": "group_1764103735864",
+      "matchType": "group"
     }
   ],
   "playoffMatches": {
@@ -951,5 +1104,5 @@
     "semi": [],
     "final": []
   },
-  "exportDate": "2025-11-22T14:06:23.234Z"
+  "exportDate": "2025-11-26T12:45:07.600Z"
 }
