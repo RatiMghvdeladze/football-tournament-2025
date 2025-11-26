@@ -1098,6 +1098,27 @@
       "goals": 1,
       "matchId": "group_1764103735864",
       "matchType": "group"
+    },
+    {
+      "player": "ტიტე ზვიადაძე",
+      "team": "Trinity",
+      "goals": 4,
+      "matchId": "group_1764163214926",
+      "matchType": "group"
+    },
+    {
+      "player": "საბა ადეიშვილი",
+      "team": "Trinity",
+      "goals": 1,
+      "matchId": "group_1764163214926",
+      "matchType": "group"
+    },
+    {
+      "player": "გიორგი ურიათმყოფელი",
+      "team": "Trinity",
+      "goals": 1,
+      "matchId": "group_1764163214926",
+      "matchType": "group"
     }
   ],
   "playoffMatches": {
@@ -1106,5 +1127,5 @@
     "semi": [],
     "final": []
   },
-  "exportDate": "2025-11-26T13:26:15.731Z"
+  "exportDate": "2025-11-26T13:33:49.473Z"
 }
