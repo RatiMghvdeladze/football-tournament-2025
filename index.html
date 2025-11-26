@@ -138,11 +138,10 @@
             background: rgba(255,255,255,0.05);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 24px;
+            padding: 20px;
             border: 1px solid rgba(255,255,255,0.1);
             box-shadow: 0 8px 32px rgba(0,0,0,0.2);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow-x: auto;
         }
 
         .group:hover {
@@ -183,45 +182,52 @@
         .standings-table {
             width: 100%;
             border-radius: 12px;
-            overflow-x: auto;
-            overflow-y: visible;
+            overflow: visible;
             margin-top: 16px;
-            -webkit-overflow-scrolling: touch;
         }
 
         .standings-table table {
             width: 100%;
-            min-width: 600px;
             border-collapse: collapse;
+            table-layout: fixed;
         }
 
         .standings-table th {
             background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
             color: white;
-            padding: 14px 8px;
+            padding: 10px 4px;
             text-align: center;
-            font-size: clamp(0.7rem, 2vw, 0.85rem);
+            font-size: clamp(0.65rem, 1.5vw, 0.8rem);
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
+            letter-spacing: 0.3px;
+        }
+
+        .standings-table th:first-child {
+            width: 8%;
         }
 
         .standings-table th:nth-child(2) {
+            width: 32%;
             text-align: left;
-            min-width: 120px;
+            padding-left: 8px;
+        }
+
+        .standings-table th:not(:first-child):not(:nth-child(2)) {
+            width: 7.5%;
         }
 
         .standings-table td {
-            padding: 12px 8px;
+            padding: 10px 4px;
             border-bottom: 1px solid rgba(255,255,255,0.05);
-            font-size: clamp(0.75rem, 2vw, 0.9rem);
+            font-size: clamp(0.7rem, 1.5vw, 0.85rem);
             text-align: center;
-            white-space: nowrap;
         }
 
         .standings-table td:nth-child(2) {
             text-align: left;
+            padding-left: 8px;
+            font-weight: 600;
         }
 
         .standings-table tr {
@@ -395,33 +401,30 @@
         /* Mobile Optimizations */
         @media (max-width: 768px) {
             .container {
-                padding: 16px;
+                padding: 12px;
             }
 
             header {
-                margin-bottom: 24px;
+                margin-bottom: 20px;
             }
 
             .tabs {
-                margin-bottom: 24px;
+                margin-bottom: 20px;
             }
 
             .group {
-                padding: 16px;
-            }
-
-            .standings-table {
-                border-radius: 8px;
-            }
-
-            .standings-table table {
-                min-width: 550px;
+                padding: 14px;
             }
 
             .standings-table th,
             .standings-table td {
-                padding: 10px 6px;
-                font-size: 0.75rem;
+                padding: 8px 3px;
+                font-size: 0.65rem;
+            }
+
+            .standings-table th:nth-child(2),
+            .standings-table td:nth-child(2) {
+                padding-left: 6px;
             }
 
             .bracket-container {
@@ -429,18 +432,18 @@
             }
 
             .scorers-list {
-                padding: 20px 16px;
+                padding: 16px;
             }
         }
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
             }
 
             .tab {
-                padding: 10px 16px;
-                font-size: 0.85rem;
+                padding: 10px 14px;
+                font-size: 0.8rem;
             }
 
             .group {
@@ -452,19 +455,15 @@
                 margin-bottom: 12px;
             }
 
-            .standings-table table {
-                min-width: 500px;
-            }
-
             .standings-table th,
             .standings-table td {
-                padding: 8px 4px;
-                font-size: 0.7rem;
+                padding: 7px 2px;
+                font-size: 0.6rem;
             }
 
             .standings-table th:nth-child(2),
             .standings-table td:nth-child(2) {
-                min-width: 100px;
+                padding-left: 4px;
             }
         }
     </style>
