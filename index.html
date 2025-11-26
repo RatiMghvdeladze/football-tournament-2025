@@ -121,14 +121,14 @@
         /* Modern Card Grid */
         .groups-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             margin-top: 20px;
         }
 
         .standings-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             margin-top: 20px;
         }
@@ -204,17 +204,17 @@
         }
 
         .standings-table th:first-child {
-            width: 8%;
+            width: 6%;
         }
 
         .standings-table th:nth-child(2) {
-            width: 32%;
+            width: 28%;
             text-align: left;
             padding-left: 8px;
         }
 
         .standings-table th:not(:first-child):not(:nth-child(2)) {
-            width: 7.5%;
+            width: 8.25%;
         }
 
         .standings-table td {
@@ -399,6 +399,13 @@
         }
 
         /* Mobile Optimizations */
+        @media (max-width: 1024px) {
+            .groups-container,
+            .standings-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 12px;
@@ -419,7 +426,7 @@
             .standings-table th,
             .standings-table td {
                 padding: 8px 3px;
-                font-size: 0.65rem;
+                font-size: 0.7rem;
             }
 
             .standings-table th:nth-child(2),
@@ -458,7 +465,7 @@
             .standings-table th,
             .standings-table td {
                 padding: 7px 2px;
-                font-size: 0.6rem;
+                font-size: 0.65rem;
             }
 
             .standings-table th:nth-child(2),
