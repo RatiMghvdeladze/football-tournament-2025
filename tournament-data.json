@@ -40,9 +40,9 @@
         "won": 2,
         "drawn": 0,
         "lost": 1,
-        "gf": 4,
+        "gf": 5,
         "ga": 3,
-        "gd": 1,
+        "gd": 2,
         "points": 6
       },
       "FC QSOVROSTVIS": {
@@ -56,33 +56,33 @@
         "points": 6
       },
       "ამბიდექსტერი": {
-        "played": 4,
-        "won": 1,
-        "drawn": 0,
-        "lost": 3,
-        "gf": 3,
-        "ga": 6,
-        "gd": -3,
-        "points": 3
-      },
-      "Trinity": {
-        "played": 3,
+        "played": 5,
         "won": 2,
         "drawn": 0,
-        "lost": 1,
+        "lost": 3,
         "gf": 6,
-        "ga": 3,
-        "gd": 3,
+        "ga": 6,
+        "gd": 0,
         "points": 6
       },
+      "Trinity": {
+        "played": 4,
+        "won": 3,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 13,
+        "ga": 3,
+        "gd": 10,
+        "points": 9
+      },
       "GSE": {
-        "played": 3,
+        "played": 0,
         "won": 0,
         "drawn": 0,
-        "lost": 3,
-        "gf": 2,
-        "ga": 8,
-        "gd": -6,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
         "points": 0
       },
       "პირველი მერცხალი": {
@@ -91,8 +91,8 @@
         "drawn": 0,
         "lost": 0,
         "gf": 6,
-        "ga": 3,
-        "gd": 3,
+        "ga": 0,
+        "gd": 6,
         "points": 6
       }
     },
@@ -488,7 +488,7 @@
       "group": "A",
       "home": "FC Kiutletiko",
       "away": "GSE",
-      "homeScore": 2,
+      "homeScore": 3,
       "awayScore": 0,
       "id": 1762555867546
     },
@@ -537,7 +537,7 @@
       "home": "პირველი მერცხალი",
       "away": "GSE",
       "homeScore": 4,
-      "awayScore": 2,
+      "awayScore": 0,
       "id": 1764103735864
     },
     {
@@ -555,6 +555,22 @@
       "homeScore": 2,
       "awayScore": 1,
       "id": 1764104207901
+    },
+    {
+      "group": "A",
+      "home": "GSE",
+      "away": "ამბიდექსტერი",
+      "homeScore": 0,
+      "awayScore": 3,
+      "id": 1764163200171
+    },
+    {
+      "group": "A",
+      "home": "GSE",
+      "away": "Trinity",
+      "homeScore": 0,
+      "awayScore": 7,
+      "id": 1764163214926
     }
   ],
   "scorers": [
@@ -1082,20 +1098,6 @@
       "goals": 1,
       "matchId": "group_1764103735864",
       "matchType": "group"
-    },
-    {
-      "player": "ამიკო ლომსიანიძე",
-      "team": "GSE",
-      "goals": 1,
-      "matchId": "group_1764103735864",
-      "matchType": "group"
-    },
-    {
-      "player": "დათო სურმავა",
-      "team": "GSE",
-      "goals": 1,
-      "matchId": "group_1764103735864",
-      "matchType": "group"
     }
   ],
   "playoffMatches": {
@@ -1104,5 +1106,5 @@
     "semi": [],
     "final": []
   },
-  "exportDate": "2025-11-26T12:45:07.600Z"
+  "exportDate": "2025-11-26T13:26:15.731Z"
 }
