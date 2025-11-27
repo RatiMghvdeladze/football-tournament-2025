@@ -232,13 +232,13 @@
         "points": 7
       },
       "ბილბაო": {
-        "played": 3,
+        "played": 4,
         "won": 0,
         "drawn": 1,
-        "lost": 2,
-        "gf": 3,
-        "ga": 8,
-        "gd": -5,
+        "lost": 3,
+        "gf": 4,
+        "ga": 13,
+        "gd": -9,
         "points": 1
       },
       "წერო": {
@@ -262,14 +262,14 @@
         "points": 7
       },
       "Nageci": {
-        "played": 3,
-        "won": 0,
+        "played": 4,
+        "won": 1,
         "drawn": 1,
         "lost": 2,
-        "gf": 2,
-        "ga": 5,
-        "gd": -3,
-        "points": 1
+        "gf": 7,
+        "ga": 6,
+        "gd": 1,
+        "points": 4
       },
       "გოლანდი": {
         "played": 4,
@@ -635,6 +635,14 @@
       "homeScore": 1,
       "awayScore": 2,
       "id": 1764165564139
+    },
+    {
+      "group": "D",
+      "home": "Nageci",
+      "away": "ბილბაო",
+      "homeScore": 5,
+      "awayScore": 1,
+      "id": 1764264112215
     }
   ],
   "scorers": [
@@ -1309,6 +1317,20 @@
       "goals": 1,
       "matchId": "group_1764165139069",
       "matchType": "group"
+    },
+    {
+      "player": "დათო დავითაია",
+      "team": "Nageci",
+      "goals": 5,
+      "matchId": "group_1764264112215",
+      "matchType": "group"
+    },
+    {
+      "player": "დაჩი ჩადუნელი",
+      "team": "ბილბაო",
+      "goals": 1,
+      "matchId": "group_1764264112215",
+      "matchType": "group"
     }
   ],
   "playoffMatches": {
@@ -1317,5 +1339,5 @@
     "semi": [],
     "final": []
   },
-  "exportDate": "2025-11-26T14:09:09.577Z"
+  "exportDate": "2025-11-27T17:22:33.311Z"
 }
