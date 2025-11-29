@@ -66,14 +66,14 @@
         "points": 6
       },
       "Trinity": {
-        "played": 4,
-        "won": 3,
+        "played": 5,
+        "won": 4,
         "drawn": 0,
         "lost": 1,
-        "gf": 13,
+        "gf": 16,
         "ga": 3,
-        "gd": 10,
-        "points": 9
+        "gd": 13,
+        "points": 12
       },
       "GSE": {
         "played": 0,
@@ -86,13 +86,13 @@
         "points": 0
       },
       "პირველი მერცხალი": {
-        "played": 4,
+        "played": 5,
         "won": 2,
         "drawn": 0,
-        "lost": 2,
+        "lost": 3,
         "gf": 9,
-        "ga": 2,
-        "gd": 7,
+        "ga": 5,
+        "gd": 4,
         "points": 6
       }
     },
@@ -160,14 +160,14 @@
     },
     "C": {
       "დიდი გზა": {
-        "played": 3,
-        "won": 2,
+        "played": 4,
+        "won": 3,
         "drawn": 1,
         "lost": 0,
-        "gf": 6,
+        "gf": 9,
         "ga": 1,
-        "gd": 5,
-        "points": 7
+        "gd": 8,
+        "points": 10
       },
       "არა": {
         "played": 4,
@@ -210,26 +210,26 @@
         "points": 2
       },
       "პომპეი": {
-        "played": 4,
+        "played": 5,
         "won": 1,
         "drawn": 0,
-        "lost": 3,
+        "lost": 4,
         "gf": 4,
-        "ga": 9,
-        "gd": -5,
+        "ga": 12,
+        "gd": -8,
         "points": 3
       }
     },
     "D": {
       "თუ მაჩ": {
-        "played": 4,
-        "won": 3,
+        "played": 5,
+        "won": 4,
         "drawn": 1,
         "lost": 0,
-        "gf": 11,
-        "ga": 5,
-        "gd": 6,
-        "points": 10
+        "gf": 18,
+        "ga": 8,
+        "gd": 10,
+        "points": 13
       },
       "ბილბაო": {
         "played": 5,
@@ -242,14 +242,14 @@
         "points": 1
       },
       "წერო": {
-        "played": 4,
-        "won": 3,
+        "played": 5,
+        "won": 4,
         "drawn": 1,
         "lost": 0,
-        "gf": 14,
+        "gf": 17,
         "ga": 6,
-        "gd": 8,
-        "points": 10
+        "gd": 11,
+        "points": 13
       },
       "კიდეკაია": {
         "played": 5,
@@ -262,23 +262,23 @@
         "points": 7
       },
       "Nageci": {
-        "played": 4,
+        "played": 5,
         "won": 1,
         "drawn": 1,
-        "lost": 2,
+        "lost": 3,
         "gf": 7,
-        "ga": 6,
-        "gd": 1,
+        "ga": 9,
+        "gd": -2,
         "points": 4
       },
       "გოლანდი": {
-        "played": 4,
+        "played": 5,
         "won": 1,
         "drawn": 1,
-        "lost": 2,
-        "gf": 6,
-        "ga": 7,
-        "gd": -1,
+        "lost": 3,
+        "gf": 9,
+        "ga": 14,
+        "gd": -5,
         "points": 4
       }
     }
@@ -691,6 +691,38 @@
       "homeScore": 0,
       "awayScore": 3,
       "id": 1764330769553
+    },
+    {
+      "group": "D",
+      "home": "თუ მაჩ",
+      "away": "გოლანდი",
+      "homeScore": 7,
+      "awayScore": 3,
+      "id": 1764408711214
+    },
+    {
+      "group": "D",
+      "home": "წერო",
+      "away": "Nageci",
+      "homeScore": 3,
+      "awayScore": 0,
+      "id": 1764408801885
+    },
+    {
+      "group": "A",
+      "home": "პირველი მერცხალი",
+      "away": "Trinity",
+      "homeScore": 0,
+      "awayScore": 3,
+      "id": 1764408867532
+    },
+    {
+      "group": "C",
+      "home": "დიდი გზა",
+      "away": "პომპეი",
+      "homeScore": 3,
+      "awayScore": 0,
+      "id": 1764408998055
     }
   ],
   "scorers": [
@@ -1519,6 +1551,62 @@
       "goals": 1,
       "matchId": "group_1764330769553",
       "matchType": "group"
+    },
+    {
+      "player": "ბაქარ ბანძელაძე",
+      "team": "გოლანდი",
+      "goals": 2,
+      "matchId": "group_1764408711214",
+      "matchType": "group"
+    },
+    {
+      "player": "მიშო მღვდლიაშვილი",
+      "team": "გოლანდი",
+      "goals": 1,
+      "matchId": "group_1764408711214",
+      "matchType": "group"
+    },
+    {
+      "player": "დავით ტაბატაძე",
+      "team": "თუ მაჩ",
+      "goals": 2,
+      "matchId": "group_1764408711214",
+      "matchType": "group"
+    },
+    {
+      "player": "მიშო უჯერაშვილი",
+      "team": "თუ მაჩ",
+      "goals": 3,
+      "matchId": "group_1764408711214",
+      "matchType": "group"
+    },
+    {
+      "player": "ლუკა ნარსია",
+      "team": "თუ მაჩ",
+      "goals": 2,
+      "matchId": "group_1764408711214",
+      "matchType": "group"
+    },
+    {
+      "player": "თორნიკე წერეთელი",
+      "team": "წერო",
+      "goals": 1,
+      "matchId": "group_1764408801885",
+      "matchType": "group"
+    },
+    {
+      "player": "გიორგი უგულავა",
+      "team": "წერო",
+      "goals": 1,
+      "matchId": "group_1764408801885",
+      "matchType": "group"
+    },
+    {
+      "player": "აკაკი ღაჭავა",
+      "team": "წერო",
+      "goals": 1,
+      "matchId": "group_1764408801885",
+      "matchType": "group"
     }
   ],
   "playoffMatches": {
@@ -1527,5 +1615,5 @@
     "semi": [],
     "final": []
   },
-  "exportDate": "2025-11-28T12:03:19.017Z"
+  "exportDate": "2025-11-29T09:54:01.296Z"
 }
