@@ -36,7 +36,7 @@
   "standings": {
     "A": {
       "FC Kiutletiko": {
-        "played": 0,
+        "played": 5,
         "won": 0,
         "drawn": 0,
         "lost": 0,
@@ -76,7 +76,7 @@
         "points": 12
       },
       "GSE": {
-        "played": 0,
+        "played": 5,
         "won": 0,
         "drawn": 0,
         "lost": 0,
@@ -1617,4 +1617,5 @@
   },
   "exportDate": "2025-11-29T09:54:01.296Z"
 }
+
 
