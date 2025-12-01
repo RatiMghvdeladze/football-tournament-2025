@@ -57,13 +57,13 @@
       },
       "ამბიდექსტერი": {
         "played": 5,
-        "won": 2,
+        "won": 3,
         "drawn": 0,
-        "lost": 3,
+        "lost": 2,
         "gf": 9,
         "ga": 4,
         "gd": 5,
-        "points": 6
+        "points": 9
       },
       "Trinity": {
         "played": 5,
@@ -1617,5 +1617,6 @@
   },
   "exportDate": "2025-11-29T09:54:01.296Z"
 }
+
 
 
