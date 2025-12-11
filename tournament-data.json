@@ -1738,6 +1738,76 @@
       "goals": 1,
       "matchId": "group_1764618821934",
       "matchType": "group"
+    },
+    {
+      "player": "დავით ტაბატაძე",
+      "team": "თუ მაჩ",
+      "goals": 2,
+      "matchId": "playoff_round16_4",
+      "matchType": "playoff"
+    },
+    {
+      "player": "მერაბი ბოჭოიძე",
+      "team": "თუ მაჩ",
+      "goals": 1,
+      "matchId": "playoff_round16_4",
+      "matchType": "playoff"
+    },
+    {
+      "player": "დავით მათიაშვილი",
+      "team": "არა",
+      "goals": 3,
+      "matchId": "playoff_round16_3",
+      "matchType": "playoff"
+    },
+    {
+      "player": "თედო რიონიძე",
+      "team": "pawo",
+      "goals": 1,
+      "matchId": "playoff_round16_2",
+      "matchType": "playoff"
+    },
+    {
+      "player": "ანდრია კეკენაძე",
+      "team": "pawo",
+      "goals": 4,
+      "matchId": "playoff_round16_2",
+      "matchType": "playoff"
+    },
+    {
+      "player": "საბა ნოზაძე",
+      "team": "pawo",
+      "goals": 1,
+      "matchId": "playoff_round16_2",
+      "matchType": "playoff"
+    },
+    {
+      "player": "ჯემიკო ჯაბიძე",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "playoff_round16_1",
+      "matchType": "playoff"
+    },
+    {
+      "player": "ვაკო ქარდავა",
+      "team": "SE7EN",
+      "goals": 2,
+      "matchId": "playoff_round16_1",
+      "matchType": "playoff"
+    },
+    {
+      "player": "ნიკოლოზ ნადარეიშვილი",
+      "team": "SE7EN",
+      "goals": 1,
+      "matchId": "playoff_round16_1",
+      "matchType": "playoff"
+    },
+    {
+      "player": "გიორგი ფურცელაძე",
+      "team": "FC QSOVROSTVIS",
+      "goals": 1,
+      "matchId": "playoff_round16_1",
+      "matchType": "playoff"
     }
   ],
   "playoffMatches": {
@@ -1746,52 +1816,52 @@
         "id": 1,
         "team1": "FC QSOVROSTVIS",
         "team2": "SE7EN",
-        "score1": null,
-        "score2": null,
+        "score1": 1,
+        "score2": 4,
         "penaltyScore1": null,
         "penaltyScore2": null,
-        "winner": null,
-        "completed": false
+        "winner": "SE7EN",
+        "completed": true
       },
       {
         "id": 2,
         "team1": "pawo",
         "team2": "ამბიდექსტერი",
-        "score1": null,
-        "score2": null,
+        "score1": 6,
+        "score2": 0,
         "penaltyScore1": null,
         "penaltyScore2": null,
-        "winner": null,
-        "completed": false
+        "winner": "pawo",
+        "completed": true
       },
       {
         "id": 3,
         "team1": "არა",
         "team2": "კიდეკაია",
-        "score1": null,
-        "score2": null,
+        "score1": 3,
+        "score2": 1,
         "penaltyScore1": null,
         "penaltyScore2": null,
-        "winner": null,
-        "completed": false
+        "winner": "არა",
+        "completed": true
       },
       {
         "id": 4,
         "team1": "თუ მაჩ",
         "team2": "საძმოს წევრები",
-        "score1": null,
-        "score2": null,
+        "score1": 3,
+        "score2": 0,
         "penaltyScore1": null,
         "penaltyScore2": null,
-        "winner": null,
-        "completed": false
+        "winner": "თუ მაჩ",
+        "completed": true
       }
     ],
     "quarter": [
       {
         "id": 5,
         "team1": "დიდი გზა",
-        "team2": null,
+        "team2": "SE7EN",
         "score1": null,
         "score2": null,
         "penaltyScore1": null,
@@ -1802,7 +1872,7 @@
       {
         "id": 6,
         "team1": "წერო",
-        "team2": null,
+        "team2": "pawo",
         "score1": null,
         "score2": null,
         "penaltyScore1": null,
@@ -1813,7 +1883,7 @@
       {
         "id": 7,
         "team1": "Trinity",
-        "team2": null,
+        "team2": "არა",
         "score1": null,
         "score2": null,
         "penaltyScore1": null,
@@ -1824,7 +1894,7 @@
       {
         "id": 8,
         "team1": "ფეოლა",
-        "team2": null,
+        "team2": "თუ მაჩ",
         "score1": null,
         "score2": null,
         "penaltyScore1": null,
@@ -1871,6 +1941,5 @@
       }
     ]
   },
-  "exportDate": "2025-12-01T19:58:18.910Z"
+  "exportDate": "2025-12-11T21:17:04.544Z"
 }
-
